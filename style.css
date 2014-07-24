@@ -87,6 +87,11 @@ a {
     color: #d42b15;
     text-decoration: none;
 }
+p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  margin: 0 0 1em;
+}
 /*img{
 	border:5px solid #ebebeb;
 }*/
@@ -420,14 +425,11 @@ footer#footer .span4{
 #left.widget-area {
     margin-top: 40px;
 }
-p {
-    margin: 0 0 10px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-}
+
 .signa p{
     font-family: 'Droid Serif', serif;
 }
+
 iframe#adhesions{
     height: 800px;
 }
