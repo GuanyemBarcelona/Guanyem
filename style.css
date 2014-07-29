@@ -8,8 +8,8 @@ Template: customizr
 Author URI: http://www.lawebmistress.org
 Tags: barcelona, desenvolupament per associacions i non-profit
 
-	License: GNU General Public License v2.0
-	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    License: GNU General Public License v2.0
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 */
 
@@ -17,64 +17,10 @@ Tags: barcelona, desenvolupament per associacions i non-profit
 @import url();
 
 
-/**Portada*/
-/*Slide Txt Area*/
-.carousel-caption {
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
-    line-height: 14px;
-    margin-left: 0;
-    width: 33.3%;
-    padding: 3% 2%;
-    position: relative;
-    vertical-align: top;
-}
-h1 {
-    font-size: 36px;
-    line-height: 38px;
-}
-.lead {
-    font-size: 16px;
-    font-weight: 200;
-    line-height: 30px;
-    margin-bottom: 20px;
-}
-/*Botones Color*/
-.btn-primary {
-    background-color: red;
-    background-image: none;
-    background-repeat: repeat-x;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-    color: white;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-}
-
-/*Nav Bar*/
-.navbar .navbar-inner {
-    border: 0 none;
-    box-shadow: none;
-    margin: 14px 5px 10px;
-    padding-left: 5px;
-    z-index: 200;
-}
-
-.navbar-inner {
-    background-color: #ffffff;
-    background-image: none;
-}
-
-
-/* Add by sinsistema */
-
-#menu-menu-top li, .menu-menu-top-castellano0-container li { float: right;line-height: normal; height: 40px;  font-family: 'Droid Serif', serif;
-    font-weight: 700;}
-
-
-
 /* Changes on parent Theme by sinsistema 
-
 File: /themes/customizr/parts/class-header-header_main.php line 279-280 = second Menu added
-
 */
+
 body {
     background:#ffffff;
     color: #494443;
@@ -90,39 +36,21 @@ a {
 p {
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  margin: 0 0 1em;
+  margin: 0 0 1.2em;
 }
 /*img{
-	border:5px solid #ebebeb;
+    border:5px solid #ebebeb;
 }*/
 hr{
     border:none;
 }
-.tc-header{
-    border:none;
-    border-bottom:1px solid #fde1d4;
-    display:table;
+dt, dd {
+  line-height: 1.25;
 }
-.tc-header .brand{
-    width:28.3%;
-    display:table-cell;
-    vertical-align: middle;
+dd.tubepress_meta {
+  text-align: left;
 }
-.tc-header .brand a{
-    margin: 10px 0;
-}
-.tc-header .navbar-wrapper{
-    border-left:1px solid #fde1d4;
-    width: 66.70%;
-    margin:0;
-    display:table-cell;
-    float: right;
-}
-.navbar .navbar-inner{
-    padding:0;
-    margin:0px;
-    width: 100%;
-}
+
 h2{
     font-family: 'Raleway', sans-serif;
     font-weight: 900;
@@ -139,8 +67,15 @@ h3{
 h4{
     font-style: italic;
 }
-/** MENU **/
 
+/* Menu top */
+/* Add by sinsistema */
+#menu-menu-top li, .menu-menu-top-castellano0-container li { float: right;line-height: normal; height: 40px;  font-family: 'Droid Serif', serif; font-weight: 700;}
+
+/** MENU **/
+.menu a.current-menu-item {
+  text-decoration: underline;
+}
 #lang_sel_list {
     float: left;
     font-family: 'Raleway', sans-serif;
@@ -184,6 +119,8 @@ h4{
     color: #fff;
     text-decoration: underline;
 }
+
+/* navbar */
 .navbar{
     margin: 0;
 }
@@ -231,6 +168,19 @@ h4{
     padding: 8px 0;
     height: 40px;
 }
+.navbar .navbar-inner{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    z-index: 200;
+}
+.navbar-inner {
+    background-color: #ffffff;
+    background-image: none;
+}
+
 .social-block a{
     float:right;
     color: #494443;
@@ -248,8 +198,31 @@ h4{
     font-size: 12px;
 }
 
+/* tc header */
+.tc-header{
+    border:none;
+    border-bottom:1px solid #fde1d4;
+    display:table;
+}
+.tc-header .brand{
+    width:28.3%;
+    display:table-cell;
+    vertical-align: middle;
+}
+.tc-header .brand a{
+    margin: 10px 0;
+}
+.tc-header .navbar-wrapper{
+    border-left:1px solid #fde1d4;
+    width: 66.70%;
+    margin:0;
+    display:table-cell;
+    float: right;
+}
+
 /*** HOME ***/
 
+/* marketing */
 .marketing{
     margin:-20px 0 0 0;
     display:table;
@@ -285,6 +258,7 @@ h4{
     margin: 0;
     line-height: 24px;
 }
+
 .fp-one{
     margin:0;
     background:#f8ebe5;
@@ -297,6 +271,16 @@ h4{
     margin:0;
     background:#fdddce;
 }
+
+
+/*.btn-primary {
+    background-color: red;
+    background-image: none;
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}*/
 .btn-primary{
     color: #ffffff !important;
     background: #f0a594;
@@ -316,22 +300,51 @@ h4{
     background-color: #d42b16;
     border-bottom-color: #b32413;
 }
-.carousel-caption .btn{
-    background-color: #d42b16;
-    border-bottom-color: #b32413;
-    padding: 20px;
-    width: 90%;
-    font-size: 23px;
-    margin-top: 27px;
-}
-.carousel-caption .lead{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    font-size: 17px;
-    margin:20px 0 0 0;
-}
-/***  CONTENIDO ADHESIONES ****/
 
+/* Carroussel Home */
+.carousel {}
+  .carousel-inner {}
+    .carousel .item {}
+      .carousel-image {}
+      .carousel-caption {
+        width: 33.3%;
+        padding: 3% 2%;
+        background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+        line-height: 14px;
+        margin-left: 0;
+        position: relative;
+        vertical-align: top;
+      }
+        .carousel-caption h1 {
+          font-size: 36px;
+          line-height: 1;
+        }
+        .carousel-caption p {
+          font-size: 32px;
+          line-height: 1.4;
+          text-align: center;
+        } 
+        .carousel-caption .btn {
+          background-color: #d42b16;
+          border-bottom-color: #b32413;
+          padding: 20px;
+          width: 90%;
+          font-size: 23px;
+          margin-top: 27px;
+        }
+        .carousel-caption .lead {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 400;
+          font-size: 17px;
+          margin: 20px 0 0 0;
+        }
+
+/* Signa */
+.signa p {
+  font-family: 'Droid Serif', serif;
+}
+
+/***  CONTENIDO ADHESIONES ****/
 .safari article.page .format-icon:before, .chrome article.page .format-icon:before, .format-icon:before {
     display:none;
 }
@@ -401,6 +414,7 @@ footer#footer .colophon .social-block a{
 footer#footer .span4{
     margin: 0;
 }
+
 /***** SIDEBAR ****/
 #right.widget-area, #left.widget-area{
     border:none;
@@ -426,13 +440,13 @@ footer#footer .span4{
     margin-top: 40px;
 }
 
-.signa p{
-    font-family: 'Droid Serif', serif;
-}
-
 iframe#adhesions{
     height: 800px;
 }
+
+/*
+* Responsive Web Design
+*/
 @media (min-width: 1200px){
     .carousel, .tc-header{
         width:1170px;
