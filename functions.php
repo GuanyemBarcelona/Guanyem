@@ -9,7 +9,6 @@
 register_nav_menu( 'secundary', __( 'Top Menu', 'customizr' )  ); /* Second menu added by sinsistema */
 
 function glanguages_widgets_init() {
-
 	register_sidebar( array(
 		'name' => 'Guanyem Languages',
 		'id' => 'guanyem_languages',
@@ -21,8 +20,8 @@ function glanguages_widgets_init() {
 }
 add_action( 'widgets_init', 'glanguages_widgets_init' );
 add_editor_style('editor-style.css');
-function gbloc_widgets_init() {
 
+function gbloc_widgets_init() {
 	register_sidebar( array(
 		'name' => 'Guanyem Bloc',
 		'id' => 'guanyem_bloc',
@@ -34,3 +33,12 @@ function gbloc_widgets_init() {
 }
 add_action( 'widgets_init', 'gbloc_widgets_init' );
 add_editor_style('editor-style.css');
+
+/*
+* enqueue scripts
+*/
+function g_scripts() {
+  wp_enqueue_script('guanyem_init', get_stylesheet_directory_uri() . '/js/init.js', array(), '1.0.0', true);
+}
+add_action( 'wp_enqueue_scripts', 'g_scripts');
+

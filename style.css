@@ -8,8 +8,8 @@ Template: customizr
 Author URI: http://www.lawebmistress.org
 Tags: barcelona, desenvolupament per associacions i non-profit
 
-    License: GNU General Public License v2.0
-    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+  License: GNU General Public License v2.0
+  License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 */
 
@@ -39,7 +39,7 @@ p {
   margin: 0 0 1.2em;
 }
 /*img{
-    border:5px solid #ebebeb;
+  border:5px solid #ebebeb;
 }*/
 hr{
     border:none;
@@ -307,23 +307,19 @@ h4{
     .carousel .item {}
       .carousel-image {}
       .carousel-caption {
-        width: 33.3%;
-        padding: 3% 2%;
+        padding: 30px 12%;
+        width: 26%;
+        height: 390px;
         background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
         line-height: 14px;
         margin-left: 0;
         position: relative;
         vertical-align: top;
       }
-        .carousel-caption h1 {
+        /*.carousel-caption h1 {
           font-size: 36px;
           line-height: 1;
-        }
-        .carousel-caption p {
-          font-size: 32px;
-          line-height: 1.4;
-          text-align: center;
-        } 
+        }*/
         .carousel-caption .btn {
           background-color: #d42b16;
           border-bottom-color: #b32413;
@@ -333,10 +329,11 @@ h4{
           margin-top: 27px;
         }
         .carousel-caption .lead {
-          font-family: 'Raleway', sans-serif;
-          font-weight: 400;
-          font-size: 17px;
-          margin: 20px 0 0 0;
+          /*font-family: 'Raleway', sans-serif;
+          font-weight: 300;*/
+          font-size: 32px;
+          line-height: 1.25;
+          text-align: center;
         }
 
 /* Signa */
