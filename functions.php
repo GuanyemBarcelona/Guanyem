@@ -42,3 +42,22 @@ function g_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'g_scripts');
 
+/*
+* init hook: create post type press
+*/
+function gcreate_post_type_press() {
+  register_post_type('press',
+    array(
+      'labels' => array(
+        'name' => _x('Press', 'press post type'),
+        'singular_name' => _x('Press', 'press post type'),
+        'add_new_item' => __('Add New Press article'),
+      ),
+    	'public' => true,
+    	'menu_position' => 5,
+    	'menu_icon' => 'dashicons-media-document',
+    	'has_archive' => true,
+    )
+  );
+}
+add_action('init', 'gcreate_post_type_press');
