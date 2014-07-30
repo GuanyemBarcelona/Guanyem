@@ -8,8 +8,8 @@ Template: customizr
 Author URI: http://www.lawebmistress.org
 Tags: barcelona, desenvolupament per associacions i non-profit
 
-  License: GNU General Public License v2.0
-  License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    License: GNU General Public License v2.0
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 */
 
@@ -39,7 +39,7 @@ p {
   margin: 0 0 1.2em;
 }
 /*img{
-  border:5px solid #ebebeb;
+    border:5px solid #ebebeb;
 }*/
 hr{
     border:none;
@@ -560,9 +560,6 @@ iframe#adhesions{
     iframe#adhesions{
         height: 1010px;
     }
-
-}
-@media (max-width: 767px){
     .container {
         width: 90%;
     }
@@ -582,7 +579,6 @@ iframe#adhesions{
     .carousel-caption .lead{
         font-size:13px
     }
-
 }
 @media (max-width: 682px) {
     iframe#adhesions {
