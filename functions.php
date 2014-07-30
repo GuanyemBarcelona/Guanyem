@@ -61,3 +61,4 @@ function gcreate_post_type_press() {
   );
 }
 add_action('init', 'gcreate_post_type_press');
+add_post_type_support('press', 'author');
