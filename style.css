@@ -590,6 +590,11 @@ iframe#adhesions{
     }
 }
 @media (max-width: 480px) {
+    h1.entry-title, h2.entry-title {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+    
     #lang_sel_list{
         width:40%;
     }
@@ -598,5 +603,9 @@ iframe#adhesions{
     }
     .menu-menu-top-container, .menu-menu-top-castellano0-container {
         width: 60%;
+    }
+
+    .carousel-caption .lead{
+      max-height: none;
     }
 }
