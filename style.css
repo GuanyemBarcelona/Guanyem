@@ -568,6 +568,7 @@ iframe#adhesions{
         float: left;
         margin: 0 !important;
     }
+
     .carousel-caption{
         max-width: 90%;
         width: 90% !important;
@@ -575,9 +576,9 @@ iframe#adhesions{
         float: none;
         vertical-align: middle;
     }
-    .carousel-caption .lead{
-        font-size:13px
-    }
+        .carousel-caption .lead{
+            font-size: 24px
+        }
 }
 @media (max-width: 682px) {
     iframe#adhesions {
