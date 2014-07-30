@@ -570,7 +570,6 @@ iframe#adhesions{
     }
     .carousel-caption{
         max-width: 90%;
-
         width: 90% !important;
         display: table-cell;
         float: none;
@@ -587,18 +586,14 @@ iframe#adhesions{
 
     .menu-menu-top-container, .menu-menu-top-castellano0-container {
         background: #fff;
-
-    }
-
-    @media (max-width: 479px) {
-        #lang_sel_list a, #lang_sel_list a:visited {
-            padding: 10px 5px !important;
-        }
     }
 }
 @media (max-width: 480px) {
     #lang_sel_list{
         width:40%;
+    }
+    #lang_sel_list a, #lang_sel_list a:visited {
+        padding: 10px 5px !important;
     }
     .menu-menu-top-container, .menu-menu-top-castellano0-container {
         width: 60%;
