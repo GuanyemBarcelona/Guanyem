@@ -14,7 +14,7 @@ var config = {
 (function($){
   $(window).ready(function(){
     // Signatures countdown
-    //prepareSignatures();
+    prepareSignatures();
     
   }); // window ready
 
@@ -27,13 +27,13 @@ var config = {
         var count = parseInt(data);
         if (typeof count === 'number'){
           // find the number in the text, as long as we cannot put html in the slider's lead like <strong class="countdown">NUMBER</strong> which would be much appreciated :S
-          var number_str = getLocalizedNumber(config.COUNTDOWN_MAX);
+          var number_str = getNumberSeparatedByThousands(config.COUNTDOWN_MAX);
           var $lead = $first_slide.find('.carousel-caption .lead');
           var index = $lead.text().indexOf(number_str);
           var init_phrase = $lead.text().substring(0, index) + '<strong class="countdown">' + $lead.text().substring(index, index + number_str.length) + '</strong>' + $lead.text().substring(index + number_str.length);
           $lead.html(init_phrase);
           var $countdown = $lead.find('.countdown');
-          $countdown.text(getLocalizedNumber(count));
+          $countdown.text(getNumberSeparatedByThousands(count));
         }
       })
       .fail(function() {
@@ -42,7 +42,8 @@ var config = {
     }
   }
 
-  function getLocalizedNumber(num){
-    return parseInt(num).toLocaleString('ca-ES');
-  } 
+  function getNumberSeparatedByThousands(num, separator) {
+    var sep = (separator == null)? '.' : separator.toString();
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, sep);
+  }
 })(jQuery);
