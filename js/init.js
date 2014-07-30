@@ -13,8 +13,12 @@ var config = {
 
 (function($){
   $(window).ready(function(){
-
     // Signatures countdown
+    //prepareSignatures();
+    
+  }); // window ready
+
+  function prepareSignatures(){
     var $home_carousel = $('body.home .carousel');
     if ($home_carousel.length){
       var $first_slide = $home_carousel.find('> .carousel-inner > .item').eq(0);
@@ -36,8 +40,7 @@ var config = {
         console.log('Ooops... We found an error loading ' + request_url);
       });
     }
-
-  }); // window ready
+  }
 
   function getLocalizedNumber(num){
     return parseInt(num).toLocaleString('ca-ES');
