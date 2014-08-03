@@ -11,10 +11,9 @@ Template Name: Adhereix-te
     <div class="container" role="main">
         <div class="<?php echo tc__f( 'tc_column_content_wrapper_classes' , 'row column-content-wrapper' ) ?>">
 
-
-
-                
                 <div id="content" class="<?php echo tc__f( '__screen_layout' , tc__f ( '__ID' ) , 'class' ) ?> article-container">
+
+                    <?php include 'inc/sharing.php'; ?>
                     
                     <?php do_action ('__before_loop');##hooks the header of the list of post : archive, search... ?>
 

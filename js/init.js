@@ -1,7 +1,9 @@
 /*
 * Guanyem init.js ver 1.0.0
-* Open-source and loving manufacture by Guanyem Web Team
+* Open-source and loving manufacture by GWT inc. (Guanyem Web Team)
 * Barcelona 2014
+* 
+* For external (downloaded) scripts, please put them inside plugins.js :)
 */
 var locale = {}
 var config = {
@@ -13,10 +15,34 @@ var config = {
 
 (function($){
   $(window).ready(function(){
+    // sharing buttons
+    prepareSharingButtons();
+
     // Signatures countdown
     prepareSignatures();
     
   }); // window ready
+
+  function prepareSharingButtons(){
+    var popup_measures = [580, 470];
+    $('.sharing-buttons').on('click', 'a', function(e){
+      e.preventDefault();
+      popupCenter($(this).attr('href'), $(this).find('.text').html(), popup_measures);
+    });
+  }
+
+  function popupCenter(url, title, measures) {
+    var dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : screen.left;
+    var dualScreenTop = window.screenTop !== undefined ? window.screenTop : screen.top;
+    var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+    var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+    var left = ((width / 2) - (measures[0] / 2)) + dualScreenLeft;
+    var top = ((height / 3) - (measures[1] / 3)) + dualScreenTop;
+    var newWindow = window.open(url, title, 'scrollbars=yes, width=' + measures[0] + ', height=' + measures[1] + ', top=' + top + ', left=' + left);
+    if (window.focus) {
+      newWindow.focus();
+    }
+  }
 
   function prepareSignatures(){
     var $home_carousel = $('body.home .carousel');

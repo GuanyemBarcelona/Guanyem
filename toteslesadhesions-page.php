@@ -14,6 +14,8 @@ Template Name: Totes les Adhesions
             <?php do_action( '__before_article_container'); ##hook of left sidebar?>
                 
                 <div id="content" class="<?php echo tc__f( '__screen_layout' , tc__f ( '__ID' ) , 'class' ) ?> article-container">
+
+                    <?php include 'inc/sharing.php'; ?>
                     
                     <?php do_action ('__before_loop');##hooks the header of the list of post : archive, search... ?>
 

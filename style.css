@@ -11,11 +11,12 @@ Tags: barcelona, desenvolupament per associacions i non-profit
     License: GNU General Public License v2.0
     License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+*
+* Some changes and order by GWT inc. (Guanyem Web Team)
+* For external (downloaded) scripts, please put them inside plugins.js :)
 */
 
 @import url("../customizr/style.css");
-@import url();
-
 
 /* Changes on parent Theme by sinsistema 
 File: /themes/customizr/parts/class-header-header_main.php line 279-280 = second Menu added
@@ -66,6 +67,10 @@ h3{
 }
 h4{
     font-style: italic;
+}
+
+#content {
+  position: relative;
 }
 
 /* Menu top */
@@ -221,6 +226,9 @@ h4{
 }
 
 /*** HOME ***/
+article#page-13, article#page-193 {
+  padding-top: 25px;
+}
 
 /* marketing */
 .marketing{
@@ -340,6 +348,50 @@ h4{
 .signa p {
   font-family: 'Droid Serif', serif;
 }
+
+/* Sharing */
+.sharing-buttons {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  overflow: hidden;
+  margin: 10px 0 0;
+}
+  .sharing-buttons h2 {
+    margin: 0 .7em 0 0;
+    float: left;
+    font-size: 12px;
+    line-height: 1.6;
+    font-weight: normal;
+  }
+  .sharing-buttons ul {
+    float: left;
+    margin: 0;
+    overflow: hidden;
+  }
+    .sharing-buttons li {
+      float: left;
+      list-style: none;
+      margin: 0 10px 0 0;
+    }
+      .sharing-buttons li a {
+        display: block;
+        color: black;
+        font-size: 24px;
+        text-decoration: none;
+      }
+      .sharing-buttons li a:hover {
+        opacity: 0.7;
+      }
+      .sharing-buttons li a[data-action="share-facebook"] {
+        color: #3b5998;
+      }
+      .sharing-buttons li a[data-action="share-twitter"] {
+        color: #2290bf;
+      }
+        .sharing-buttons li a span {
+          display: none;
+        }
 
 /***  CONTENIDO ADHESIONES ****/
 .safari article.page .format-icon:before, .chrome article.page .format-icon:before, .format-icon:before {
