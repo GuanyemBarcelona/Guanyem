@@ -352,7 +352,7 @@ article#page-13, article#page-193 {
 /* Sharing */
 .sharing-buttons {
   position: absolute;
-  top: 35px;
+  top: 0;
   right: 0;
   overflow: hidden;
   margin: 10px 0 0;
