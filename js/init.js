@@ -5,16 +5,23 @@
 * 
 * For external (downloaded) scripts, please put them inside plugins.js :)
 */
-var locale = {}
+var locale = {
+  COUNTDOWN_REACHED_MESSAGE: {
+    ca: "<strong>{MAX}</strong> persones<br> JA han validat la proposta de Guanyem. Només ens faltes tú!",
+    es: "<strong>{MAX}</strong> personas<br> YA han validado la propuesta de Guanyem. ¡Solo nos faltas tú!"
+  },
+}
 var config = {
+  LANGUAGE: 'ca',
   HOST_URL: '', //'http://localhost/guanyem',
   COUNTDOWN_URL: '/apoyos/countdown.php',
-  COUNTDOWN_MAX: 30000,
-  COUNTDOWN_MIN: 0
+  COUNTDOWN_MAX: 30000
 };
 
 (function($){
   $(window).ready(function(){
+    config.LANGUAGE = $('html').attr('lang');
+
     // sharing buttons
     prepareSharingButtons();
 
@@ -52,14 +59,21 @@ var config = {
       var request = $.get(request_url, function(data) {
         var count = parseInt(data);
         if (typeof count === 'number'){
-          // find the number in the text, as long as we cannot put html in the slider's lead like <strong class="countdown">NUMBER</strong> which would be much appreciated :S
           var number_str = getNumberSeparatedByThousands(config.COUNTDOWN_MAX);
           var $lead = $first_slide.find('.carousel-caption .lead');
-          var index = $lead.text().indexOf(number_str);
-          var init_phrase = $lead.text().substring(0, index) + '<strong class="countdown">' + $lead.text().substring(index, index + number_str.length) + '</strong>' + $lead.text().substring(index + number_str.length);
-          $lead.html(init_phrase);
-          var $countdown = $lead.find('.countdown');
-          $countdown.text(getNumberSeparatedByThousands(count));
+          if (count > 0){
+            // find the number in the text and modify html and content: we couldn't put html in the slider's lead like <strong class="countdown">NUMBER</strong> which would be much appreciated :S
+            var index = $lead.text().indexOf(number_str);
+            var init_phrase = $lead.text().substring(0, index) + '<strong class="countdown">' + $lead.text().substring(index, index + number_str.length) + '</strong>' + $lead.text().substring(index + number_str.length);
+            $lead.html(init_phrase);
+            var $countdown = $lead.find('.countdown');
+            $countdown.text(getNumberSeparatedByThousands(count));
+          }else{
+            // signatures arrived to zero!
+            var message = locale.COUNTDOWN_REACHED_MESSAGE[config.LANGUAGE];
+            message = message.replace('{MAX}', number_str);
+            $lead.html(message);
+          }
         }
       })
       .fail(function() {
