@@ -4,7 +4,7 @@ $current_title = single_post_title('', FALSE);
 $message = $current_title . '%20' . $current_url;
 ?>
 <div class="sharing-buttons">
-  <h2><?php //_('Share','Guanyem'); ?>Compartir</h2>
+  <h2><?php _e('Share', 'guanyem'); ?></h2>
   <ul>
     <li>
       <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $current_url; ?>" data-action="share-facebook"><i class="fa fa-facebook-square"></i><span>facebook</span></a>
