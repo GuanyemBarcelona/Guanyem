@@ -115,8 +115,13 @@ class TC_footer_main {
 	* @since Customizr 3.0.6
 	*/
   function tc_colophon_left_block() {
+  	?>
+  	<div class="span4 credits">
+  		<p><?php icl_link_to_element(382); ?></p>
+  	</div>
   	
-  	echo apply_filters(
+  	<?php
+  	/*echo apply_filters(
   		'tc_credits_display',
   		sprintf('<div class="%1$s">%2$s</div>',
     		apply_filters( 'tc_colophon_left_block_class', 'span4 credits' ),
@@ -127,26 +132,9 @@ class TC_footer_main {
 				    '<a href="http://bambuser.com">Bambuser</a>'
 			)
   		)
-  	);
+  	);*/
   }
 
-
-	/**
-	* Center block: used for the Back to top link
-	*
-	*
-	* @package Customizr
-	* @since Customizr 3.0.10
-	*/
-	function tc_colophon_center_block() {
-    	echo apply_filters(
-    		'tc_colophon_center_block',
-    		sprintf('<div class="%1$s"><p><a class="back-to-top" href="#">%2$s</a></p></div>',
-    			apply_filters( 'tc_colophon_center_block_class', 'span4 backtop' ),
-    			__( 'Back to top' , 'customizr' )
-    		)
-    	);
-	}
 
 	/**
 	* Center block: used for the Social networks block
@@ -155,15 +143,33 @@ class TC_footer_main {
 	* @package Customizr
 	* @since Customizr 3.0.10
 	*/
-  function tc_colophon_right_block() {
+  function tc_colophon_center_block() {
     	echo apply_filters( 
-    		'tc_colophon_right_block', 
+    		'tc_colophon_center_block', 
     		sprintf('<div class="%1$s">%2$s</div>',
-    			apply_filters( 'tc_colophon_right_block_class', 'span4 social-block' ),
+    			apply_filters( 'tc_colophon_center_block_class', 'span4 social-block' ),
     			0 != tc__f( '__get_option', 'tc_social_in_footer') ? tc__f( '__get_socials' ) : ''
     		)
     	);
   }
+
+
+  /**
+	* Right block: used for the Back to top link
+	*
+	*
+	* @package Customizr
+	* @since Customizr 3.0.10
+	*/
+	function tc_colophon_right_block() {
+    	echo apply_filters(
+    		'tc_colophon_right_block',
+    		sprintf('<div class="%1$s"><p><a class="back-to-top" href="#" title="%2$s"><span>%2$s</span> <i class="fa fa-arrow-circle-up"></i></a></p></div>',
+    			apply_filters( 'tc_colophon_right_block_class', 'span4 backtop' ),
+    			__( 'Back to top' , 'customizr' )
+    		)
+    	);
+	}
 
 }//end of class
 

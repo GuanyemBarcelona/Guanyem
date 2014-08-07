@@ -451,10 +451,19 @@ footer#footer .colophon{
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
 }
-footer#footer .colophon a, footer#footer .colophon p, footer#footer .colophon a.back-to-top{
+footer#footer .colophon a, footer#footer .colophon p, footer#footer .colophon a.back-to-top {
     color:#ffffff;
     text-align: left;
 }
+  footer#footer .colophon a.back-to-top {
+    float: right;
+  }
+    footer#footer .colophon a.back-to-top span {
+      display: none;
+    }
+    footer#footer .colophon a.back-to-top .fa {
+      font-size: 30px;
+    }
 footer#footer .colophon .social-block a{
     color:#ffffff;
     width: auto;
