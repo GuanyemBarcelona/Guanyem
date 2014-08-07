@@ -32,7 +32,7 @@ class TC_footer_main {
     }
 
 
-    /**
+   /**
 	 * Displays the footer widgets areas
 	 *
 	 *
@@ -80,107 +80,91 @@ class TC_footer_main {
 	}//end of function
 
 
-
-
-
-
-    /**
+   /**
 	 * Displays the colophon (block below the widgets areas).
 	 *
 	 *
 	 * @package Customizr
 	 * @since Customizr 3.0.10
 	 */
-    function tc_colophon_display() {
-    	
-    	?>
-    	<?php ob_start() ?>
-		 <div class="colophon">
-		 	<div class="container">
-		 		<div class="<?php echo apply_filters( 'tc_colophon_class', 'row-fluid' ) ?>">
-				    <?php 
-					    //colophon blocks actions priorities
-					    //renders blocks
-					    do_action( '__colophon' ); 
-				    ?>
-      			</div><!-- .row-fluid -->
-      		</div><!-- .container -->
-      	</div><!-- .colophon -->
-    	<?php
-    	$html = ob_get_contents();
-        if ($html) ob_end_clean();
-        echo apply_filters( 'tc_colophon_display', $html );
-    }
+  function tc_colophon_display() {
+	  ob_start() ?>
+	 <div class="colophon">
+	 	<div class="container">
+	 		<div class="<?php echo apply_filters( 'tc_colophon_class', 'row-fluid' ) ?>">
+			    <?php 
+				    //colophon blocks actions priorities
+				    //renders blocks
+				    do_action( '__colophon' ); 
+			    ?>
+    			</div><!-- .row-fluid -->
+    		</div><!-- .container -->
+    	</div><!-- .colophon -->
+  	<?php
+  	$html = ob_get_contents();
+      if ($html) ob_end_clean();
+      echo apply_filters( 'tc_colophon_display', $html );
+  }
+
+  /**
+	* Left block: used for the Credits call back functions
+	* Can be filtered using the $site_credits, $tc_credits parameters
+	*
+	*
+	* @package Customizr
+	* @since Customizr 3.0.6
+	*/
+  function tc_colophon_left_block() {
+  	
+  	echo apply_filters(
+  		'tc_credits_display',
+  		sprintf('<div class="%1$s">%2$s</div>',
+    		apply_filters( 'tc_colophon_left_block_class', 'span4 credits' ),
+    		sprintf( '<p> <a href="/avis-legal/">Aviso legal</a> </p>',
+				    esc_attr( date( 'Y' ) ),
+				    esc_url( home_url() ),
+				    esc_attr(get_bloginfo()),
+				    '<a href="http://bambuser.com">Bambuser</a>'
+			)
+  		)
+  	);
+  }
 
 
-
-
-    /**
-	 * Displays the social networks block in the footer
-	 *
-	 *
-	 * @package Customizr
-	 * @since Customizr 3.0.10
-	 */
-    function tc_colophon_left_block() {
-
-      	echo apply_filters( 
-      		'tc_colophon_left_block', 
-      		sprintf('<div class="%1$s">%2$s</div>',
-      			apply_filters( 'tc_colophon_left_block_class', 'span4 social-block pull-right' ),
-      			0 != tc__f( '__get_option', 'tc_social_in_footer') ? tc__f( '__get_socials' ) : ''
-      		)
-      	);
-    }
-
-
-
-
-    /**
-	 * Footer Credits call back functions
-	 * Can be filtered using the $site_credits, $tc_credits parameters
-	 *
-	 *
-	 * @package Customizr
-	 * @since Customizr 3.0.6
-	 */
-    function tc_colophon_center_block() {
-    	
+	/**
+	* Center block: used for the Back to top link
+	*
+	*
+	* @package Customizr
+	* @since Customizr 3.0.10
+	*/
+	function tc_colophon_center_block() {
     	echo apply_filters(
-    		'tc_credits_display',
-    		sprintf('<div class="%1$s">%2$s</div>',
-	    		apply_filters( 'tc_colophon_center_block_class', 'span4 credits' ),
-	    		sprintf( '<p> <a href="/avis-legal/">Aviso legal</a> </p>',
-					    esc_attr( date( 'Y' ) ),
-					    esc_url( home_url() ),
-					    esc_attr(get_bloginfo()),
-					    '<a href="http://bambuser.com">Bambuser</a>'
-				)
-    		)
-    	);
-    }
-
-
-
-
-
-    /**
-	 * Displays the back to top block
-	 *
-	 *
-	 * @package Customizr
-	 * @since Customizr 3.0.10
-	 */
-	function tc_colophon_right_block() {
-    	echo apply_filters(
-    		'tc_colophon_right_block',
-    		sprintf('<div class="%1$s"><p class="pull-right"><a class="back-to-top" href="#">%2$s</a></p></div>',
-    			apply_filters( 'tc_colophon_right_block_class', 'span4 backtop' ),
+    		'tc_colophon_center_block',
+    		sprintf('<div class="%1$s"><p><a class="back-to-top" href="#">%2$s</a></p></div>',
+    			apply_filters( 'tc_colophon_center_block_class', 'span4 backtop' ),
     			__( 'Back to top' , 'customizr' )
     		)
     	);
 	}
 
- }//end of class
+	/**
+	* Center block: used for the Social networks block
+	*
+	*
+	* @package Customizr
+	* @since Customizr 3.0.10
+	*/
+  function tc_colophon_right_block() {
+    	echo apply_filters( 
+    		'tc_colophon_right_block', 
+    		sprintf('<div class="%1$s">%2$s</div>',
+    			apply_filters( 'tc_colophon_right_block_class', 'span4 social-block' ),
+    			0 != tc__f( '__get_option', 'tc_social_in_footer') ? tc__f( '__get_socials' ) : ''
+    		)
+    	);
+  }
+
+}//end of class
 
 
