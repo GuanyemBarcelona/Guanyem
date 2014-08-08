@@ -70,20 +70,20 @@ class TC_sidebar {
                             apply_filters( "tc_{$position}_sidebar_class", $sidebar_layout['sidebar'] ),
                             $position
       );
+
+      // banner whatsapp + telegram
+      $banner_whatsapp_id = 980;
+      if (ICL_LANGUAGE_CODE == 'es') $banner_whatsapp_id = 982;
+      $banner_whatsapp_img = wp_get_attachment_image($banner_whatsapp_id, 'full');
+
       ob_start();
       ?>
        
       <div class="<?php echo $class  ?>">
          <div id="<?php echo $position ?>" class="widget-area" role="complementary">
 
-            <?php 
-            $banner_whatsapp_id = 980;
-            if (ICL_LANGUAGE_CODE == 'es') $banner_whatsapp_id = 982;
-            ?>
             <div class="banner banner-whatsapp">
-            <?php { ?>
-              <img src="<?php print wp_get_attachment_url($banner_whatsapp_id); ?>" alt="Envia GUANYEM al 645 405 176 per WhatsApp o Telegram" />
-            <?php } ?>
+              <?php print $banner_whatsapp_img; ?>
             </div>
 
             <?php if ( is_active_sidebar( $position ) ) : ?>
