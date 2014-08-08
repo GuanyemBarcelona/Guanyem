@@ -462,7 +462,12 @@ footer#footer .colophon a, footer#footer .colophon p, footer#footer .colophon a.
       display: none;
     }
     footer#footer .colophon a.back-to-top .fa {
-      font-size: 30px;
+      font-size: 24px;
+      background: #d42b16;
+      -moz-border-radius: 15px;
+      -webkit-border-radius: 15px;
+      border-radius: 15px;
+      padding: 2px;
     }
 footer#footer .colophon .social-block a{
     color:#ffffff;
