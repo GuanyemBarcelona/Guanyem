@@ -186,15 +186,19 @@ h4{
     background-image: none;
 }
 
-.social-block a{
-    float:right;
+.social-block a {
+    float: left;
     color: #494443;
+    padding: 0 10px;
+    width: auto;
+    height: auto;
     text-shadow:none;
 }
-.social-block a:hover{
+.social-block a:hover {
     color:#d42b15;
     text-shadow:none;
 }
+
 .menu a{
     padding: 12px;
     float: right;
