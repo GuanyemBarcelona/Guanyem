@@ -485,6 +485,15 @@ footer#footer .span4{
 #right.widget-area, #left.widget-area{
     border:none;
 }
+
+
+.tc-sidebar {
+  padding: 10px 0;
+}
+  .tc-sidebar .banner {
+    margin: 0 0 10px;
+  }
+
 .textwidget ul{
     padding: 0;
     margin: 0;
