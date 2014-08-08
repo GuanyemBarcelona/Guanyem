@@ -72,8 +72,8 @@ class TC_sidebar {
       );
 
       // banner whatsapp + telegram
-      $banner_whatsapp_id = 980;
-      if (ICL_LANGUAGE_CODE == 'es') $banner_whatsapp_id = 982;
+      $banner_whatsapp_id = 1587; // 980 in DEV
+      if (ICL_LANGUAGE_CODE == 'es') $banner_whatsapp_id = 1588; // 982 in DEV
       $banner_whatsapp_img = wp_get_attachment_image($banner_whatsapp_id, 'full');
 
       ob_start();
