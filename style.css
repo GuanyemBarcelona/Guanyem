@@ -362,7 +362,7 @@ article#page-13, article#page-193 {
   margin: 10px 0 0;
 }
   .sharing-buttons h2 {
-    margin: 0 .7em 0 0;
+    margin: 0;
     float: left;
     font-size: 12px;
     line-height: 1.6;
@@ -371,28 +371,29 @@ article#page-13, article#page-193 {
   .sharing-buttons ul {
     float: left;
     margin: 0;
+    padding: 0;
     overflow: hidden;
   }
     .sharing-buttons li {
       float: left;
       list-style: none;
-      margin: 0 10px 0 0;
+      margin: 0 0 0 10px;
     }
       .sharing-buttons li a {
         display: block;
-        color: black;
-        font-size: 24px;
+        color: #BBB;
+        font-size: 22px;
         text-decoration: none;
       }
       .sharing-buttons li a:hover {
-        opacity: 0.7;
+        color: #888;
       }
-      .sharing-buttons li a[data-action="share-facebook"] {
+      /*.sharing-buttons li a[data-action="share-facebook"] {
         color: #3b5998;
       }
       .sharing-buttons li a[data-action="share-twitter"] {
         color: #2290bf;
-      }
+      }*/
         .sharing-buttons li a span {
           display: none;
         }
