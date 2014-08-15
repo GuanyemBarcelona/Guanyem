@@ -230,7 +230,7 @@ h4{
 }
 
 /*** HOME ***/
-article#page-13, article#page-193 {
+body.home #content > article {
   padding-top: 25px;
 }
 
