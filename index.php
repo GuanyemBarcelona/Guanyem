@@ -10,6 +10,23 @@
 <?php do_action( '__before_main_wrapper' ); ##hook of the header with get_header ?>
 <div id="main-wrapper" class="<?php echo tc__f( 'tc_main_wrapper_classes' , 'container' ) ?>">
 
+<?php
+// the post video
+$video_id = get_field('video_youtube_id');
+$video_title = get_field('video_title_' . ICL_LANGUAGE_CODE);
+$video_lead = get_field('video_lead_' . ICL_LANGUAGE_CODE);
+if (isset($video_id)){ ?>
+<div class="video-zone">
+  <?php if (isset($video_title)){ ?>
+  <h2><?php echo $video_title; ?></h2>
+  <?php } ?>
+  <iframe width="560" height="315" src="//www.youtube.com/embed/<?php echo $video_id; ?>" frameborder="0" allowfullscreen></iframe>
+  <?php if (isset($video_lead)){ ?>
+  <p><?php echo $video_lead; ?></p>
+  <?php } ?>
+</div>
+<?php } ?>
+
 <?php 
 if (is_front_page()) {
   if (ICL_LANGUAGE_CODE=='ca'){ ?>

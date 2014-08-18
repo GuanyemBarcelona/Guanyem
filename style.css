@@ -313,6 +313,10 @@ body.home #content > article {
     border-bottom-color: #b32413;
 }
 
+/* post video */
+.video-zone {}
+body.home .video-zone {}
+
 /* Carroussel Home */
 .carousel {}
   .carousel-inner {}
