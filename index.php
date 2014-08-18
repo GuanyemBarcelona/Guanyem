@@ -13,8 +13,8 @@
 <?php
 // the post video
 $video_id = get_field('video_youtube_id');
-$video_title = get_field('video_title_' . ICL_LANGUAGE_CODE);
-$video_lead = get_field('video_lead_' . ICL_LANGUAGE_CODE);
+$video_title = get_field('video_title');
+$video_lead = get_field('video_lead');
 if (isset($video_id)){ ?>
 <div class="video-zone">
   <?php if (isset($video_title)){ ?>
