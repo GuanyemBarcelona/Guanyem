@@ -73,3 +73,11 @@ function add_custom_types_to_archive($query) {
 }
 add_action('pre_get_posts', 'add_custom_types_to_archive');
 
+function move_the_slider() {
+  //we unhook the slider
+  remove_action('__after_header', array(TC_slider::$instance, 'tc_slider_display'));
+
+  //we re-hook the slider. Check the priority here: set to 0 to be the first in the list of different actions hooked to this hook
+  add_action('__starting_highlight', array(TC_slider::$instance, 'tc_slider_display'), 0);
+}
+add_action('wp_head', 'move_the_slider');

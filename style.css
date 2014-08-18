@@ -69,6 +69,10 @@ h4{
     font-style: italic;
 }
 
+#main-wrapper {
+  margin-top: 0;
+}
+
 #content {
   position: relative;
 }
@@ -313,18 +317,51 @@ body.home #content > article {
     border-bottom-color: #b32413;
 }
 
-/* post video */
-.video-zone {}
-body.home .video-zone {}
+/* highlight zone */
+#highlight-zone {
+  overflow: hidden;
+}
+  #highlight-zone .carousel {
+    float: left;
+    width: 66.67%;
+  }
+  #highlight-zone .video-zone {
+    float: right;
+    width: 33.33%;
+  }
 
-/* Carroussel Home */
+/* post video */
+.video-zone {
+  color: white;
+  background: #55140d;
+}
+body.home .video-zone {}
+  .video-zone > .inner {
+    padding: 20px 35px;
+  }
+    .video-zone h2 {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1;
+      color: white;
+      margin: 0 0 .6em;
+    }
+    .video-zone iframe {
+      margin: 0 0 20px;
+    }
+    .video-zone p {
+      margin: 0;
+      font-size: 13px;
+    }
+
+/* Carroussel */
 .carousel {}
   .carousel-inner {}
     .carousel .item {}
       .carousel-image {}
       .carousel-caption {
-        padding: 30px 12%;
-        width: 26%;
+        padding: 30px 5%;
+        width: 40%;
         height: 390px;
         background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
         line-height: 14px;
@@ -532,12 +569,12 @@ iframe#adhesions{
 * Responsive Web Design
 */
 @media (min-width: 1200px){
-    .carousel, .tc-header{
+    .tc-header{
         width:1170px;
         margin:0 auto;
     }
-    .carousel-inner{
-        height: 350px !important;
+    .carousel-inner, .video-zone {
+        height: 350px;
     }
 }
 @media (max-width: 1200px) {
@@ -554,7 +591,6 @@ iframe#adhesions{
         width:100%;
     }
     .carousel-caption{
-
         width: 50% !important;
     }
 }
