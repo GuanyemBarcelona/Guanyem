@@ -15,7 +15,7 @@
 $video_id = get_field('video_youtube_id');
 $video_title = get_field('video_title');
 $video_lead = get_field('video_lead');
-if (isset($video_id)){ ?>
+if (isset($video_id) && $video_id != ''){ ?>
 <div class="video-zone">
   <?php if (isset($video_title)){ ?>
   <h2><?php echo $video_title; ?></h2>
