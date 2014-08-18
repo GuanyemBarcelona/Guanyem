@@ -12,7 +12,7 @@
 
 <?php 
 if (is_front_page()) {
-  if (ICL_LANGUAGE_CODE=='ca') : ?>
+  if (ICL_LANGUAGE_CODE=='ca'){ ?>
 
        <div class="container marketing">
 
@@ -51,7 +51,7 @@ if (is_front_page()) {
     </div><!-- .container -->
     
 
-<?php elseif(ICL_LANGUAGE_CODE=='es'): ?>
+<?php }elseif(ICL_LANGUAGE_CODE=='es'){ ?>
 
        <div class="container marketing">
 
@@ -88,11 +88,11 @@ if (is_front_page()) {
             
         </div><!-- .container -->
         
-
-<?php endif;
-}
+<?php 
+  } 
+} 
 ?>
-    
+
     <div class="container" role="main">
         <div class="<?php echo tc__f( 'tc_column_content_wrapper_classes' , 'row column-content-wrapper' ) ?>">
 
