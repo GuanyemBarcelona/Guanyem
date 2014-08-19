@@ -347,7 +347,7 @@ body.home .video-zone {}
       margin: 0 0 .6em;
     }
     .video-zone iframe {
-      margin: 0 0 20px;
+      margin: 0 0 10px;
     }
     .video-zone p {
       margin: 0;
@@ -593,6 +593,9 @@ iframe#adhesions{
     .carousel-caption{
         width: 50% !important;
     }
+    #highlight-zone .video-zone {
+        min-height: 450px;
+    }
 }
 @media (max-width: 1024px) {
     #lang_sel_list{
@@ -691,6 +694,18 @@ iframe#adhesions{
         float: left;
         margin: 0 !important;
     }
+
+    #highlight-zone .carousel, #highlight-zone .video-zone {
+      float: none;
+      width: 100%;
+    }
+    #highlight-zone .video-zone {
+      text-align: center;
+      min-height: inherit;
+    }
+      #highlight-zone .video-zone > .inner {
+        padding-bottom: 30px;
+      }
 
     .carousel-caption{
         max-width: 90%;
