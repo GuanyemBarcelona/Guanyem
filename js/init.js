@@ -5,16 +5,6 @@
 * 
 * For external (downloaded) scripts, please put them inside plugins.js :)
 */
-var locale = {
-  COUNTDOWN_REACHED_MESSAGE: {
-    ca: "<strong>{MAX}</strong> persones<br> JA han validat la proposta de Guanyem. Només ens faltes tú!",
-    es: "<strong>{MAX}</strong> personas<br> YA han validado la propuesta de Guanyem. ¡Solo nos faltas tú!"
-  },
-  COUNTDOWN_REACHED_BUTTON: {
-    ca: "Seguim sumant!",
-    es: "¡Seguimos sumando!"
-  },
-}
 var config = {
   LANGUAGE: 'ca',
   HOST_URL: '', //'http://localhost/guanyem',
@@ -30,7 +20,7 @@ var config = {
     prepareSharingButtons();
 
     // Signatures countdown
-    prepareSignatures();
+    //prepareSignatures();
     
   }); // window ready
 
@@ -73,13 +63,6 @@ var config = {
             $lead.html(init_phrase);
             var $countdown = $lead.find('.countdown');
             $countdown.text(getNumberSeparatedByThousands(count));
-          }else{
-            // signatures arrived to zero!
-            var message = locale.COUNTDOWN_REACHED_MESSAGE[config.LANGUAGE];
-            message = message.replace('{MAX}', number_str);
-            $lead.html(message);
-            var btn_message = locale.COUNTDOWN_REACHED_BUTTON[config.LANGUAGE];
-            $btn.html(btn_message);
           }
         }
       })
