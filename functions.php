@@ -65,13 +65,13 @@ function gcreate_post_type_press() {
 add_action('init', 'gcreate_post_type_press');
 add_post_type_support('press', 'author');
 
-function add_custom_types_to_archive($query) {
+/*function add_custom_types_to_archive($query) {
   if ($query->is_archive()){
     $query->set('post_type', array('post', 'press'));
   }
   return $query;
 }
-add_action('pre_get_posts', 'add_custom_types_to_archive');
+add_action('pre_get_posts', 'add_custom_types_to_archive');*/
 
 function move_the_slider() {
   //we unhook the slider
