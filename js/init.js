@@ -10,6 +10,10 @@ var locale = {
     ca: "<strong>{MAX}</strong> persones<br> JA han validat la proposta de Guanyem. Només ens faltes tú!",
     es: "<strong>{MAX}</strong> personas<br> YA han validado la propuesta de Guanyem. ¡Solo nos faltas tú!"
   },
+  COUNTDOWN_REACHED_BUTTON: {
+    ca: "Seguim sumant!",
+    es: "¡Seguimos sumando!"
+  },
 }
 var config = {
   LANGUAGE: 'ca',
@@ -61,6 +65,7 @@ var config = {
         if (typeof count === 'number'){
           var number_str = getNumberSeparatedByThousands(config.COUNTDOWN_MAX);
           var $lead = $first_slide.find('.carousel-caption .lead');
+          var $btn = $first_slide.find('.carousel-caption .btn');
           if (count > 0){
             // find the number in the text and modify html and content: we couldn't put html in the slider's lead like <strong class="countdown">NUMBER</strong> which would be much appreciated :S
             var index = $lead.text().indexOf(number_str);
@@ -73,6 +78,8 @@ var config = {
             var message = locale.COUNTDOWN_REACHED_MESSAGE[config.LANGUAGE];
             message = message.replace('{MAX}', number_str);
             $lead.html(message);
+            var btn_message = locale.COUNTDOWN_REACHED_BUTTON[config.LANGUAGE];
+            $btn.html(btn_message);
           }
         }
       })
