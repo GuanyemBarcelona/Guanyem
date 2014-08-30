@@ -112,10 +112,10 @@ h4{
 
     height: 40px;
 }
-#lang_sel_list a, #lang_sel_list a:visited{
+#lang_sel_list a, #lang_sel_list a:visited {
     border: none;
     border-top-width: 0;
-    padding: 10px !important;
+    padding: 10px;
     background: #494443;
     color: #ffffff;
     margin: 0;
@@ -597,7 +597,7 @@ iframe#adhesions{
         min-height: 450px;
     }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
     #lang_sel_list{
         width:30%;
     }
@@ -672,12 +672,12 @@ iframe#adhesions{
         text-align: center;
     }
     .menu-menu-top-container li a{
-        padding: 9px 15px !important;
+        padding: 9px 15px;
         color:#494443;
         width: 100%;
     }
     .menu-menu-top-castellano0-container li a{
-        padding: 12px 6px !important;
+        padding: 12px 6px;
         color:#494443;
         width: 100%;
     }
@@ -726,23 +726,36 @@ iframe#adhesions{
     .menu-menu-top-container, .menu-menu-top-castellano0-container {
         background: #fff;
     }
+
+    .menu-menu-top-container ul, .menu-menu-top-castellano0-container ul {
+      padding: 0;
+      margin-left: 10px;
+    }
+    .menu-menu-top-container li a, .menu-menu-top-castellano0-container li a {
+      padding: 10px 6px;
+      font-size: 11px;
+    }
 }
+
+@media (max-width: 500px) {
+  #lang_sel_list,
+  .menu-menu-top-container, .menu-menu-top-castellano0-container {
+    float: none;
+    width: auto;
+  }
+  #lang_sel_list {
+    background: #494443;
+    border: none;
+    margin: 0;
+  }
+}
+
 @media (max-width: 480px) {
     h1.entry-title, h2.entry-title {
         font-size: 20px;
         line-height: 1.4;
     }
     
-    #lang_sel_list{
-        width:40%;
-    }
-    #lang_sel_list a, #lang_sel_list a:visited {
-        padding: 10px 5px !important;
-    }
-    .menu-menu-top-container, .menu-menu-top-castellano0-container {
-        width: 60%;
-    }
-
     .carousel-caption .lead{
       max-height: none;
     }
