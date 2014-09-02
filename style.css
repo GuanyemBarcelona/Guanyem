@@ -240,40 +240,41 @@ body.home #content > article {
 
 /* marketing */
 .marketing{
-    margin:-20px 0 0 0;
-    display:table;
+  margin:-20px 0 0 0;
+  display:table;
 }
-.marketing .row{
+  .marketing .row{
     margin-left: 0px;
-}
-.marketing .span4 {
-    text-align: left;
+  }
+  .marketing .span4 {
     padding: 20px 0;
     width: 33.3%;
     display: table-cell;
     float: none;
-}
-.marketing h2{
-    font-family: 'Raleway', sans-serif;
-    text-align: left;
-    color: #494443;
-    font-style: normal;
-    font-weight:800;
-    font-size: 24px;
-    line-height: 26px;
-    /*width: 80%*;*/
-    padding: 10px 10%;
-}
-.marketing .span4 p{
-    text-align: left;
-    /*width: 80%;*/
-    padding: 0 10%;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    margin: 0;
-    line-height: 24px;
-}
+  }
+    .marketing .span4 > .content {
+      padding: 20px 10%;
+      font-family: 'Raleway', sans-serif;
+    }
+      .marketing .span4 > .content h2 {
+        color: #494443;
+        text-align: left;
+        font-style: normal;
+        font-weight:800;
+        font-size: 24px;
+        line-height: 1.1;
+        margin: 0 0 .5em;
+        padding: 0;
+        height: 2em;
+        overflow: hidden;
+      }
+      .marketing .span4 > .content p {
+        font-weight: 400;
+        text-align: left;
+        font-size: 15px;
+        margin: 0;
+        line-height: 1.6;
+      }
 
 .fp-one{
     margin:0;

@@ -53,7 +53,7 @@
     <div class="row widget-area" role="complementary">
 
       <div class="span4 fp-one">
-        <div class="widget-front">
+        <div class="content">
           <h2>Com puc participar?</h2>
           <p class="fp-text-one">Guanyem Barcelona és un procés de construcció col·lectiva en què s'hi pot implicar tothom. 
           Busquem el suport de la ciutadania, la complicitat dels barris i la col·laboració dels col·lectius. 
@@ -63,7 +63,7 @@
       </div>
       
       <div class="span4 fp-two">
-        <div class="widget-front">
+        <div class="content">
           <h2>Per què volem guanyar Barcelona?</h2>
           <p class="fp-text-two">Estem  perdent Barcelona i volem recuperar-la. Per aconseguir-ho, cal que  arrenquem un procés que no parteixi 
           d'un programa electoral tancat i que ens permeti treballar a partir d'objectius concrets. Aquests són els  principis bàsics que defensem.  </p>
@@ -72,7 +72,7 @@
       </div>
       
       <div class="span4 fp-three">
-        <div class="widget-front">
+        <div class="content">
           <h2>Finançament</h2>
           <p class="fp-text-three">També en l'àmbit econòmic cal una altra manera de fer política. Ens comprometem a fer públics els nostres comptes.
           Els processos d’organització ciutadana han de garantir la seva autonomia, això implica, però, que no podem renunciar al vostre ajut.</p>
@@ -87,7 +87,7 @@
     <div class="row widget-area" role="complementary">
 
       <div class="span4 fp-one">
-        <div class="widget-front">
+        <div class="content">
           <h2>¿Cómo puedo participar?</h2>
           <p class="fp-text-one">Guanyem Barcelona es un proceso de construcción colectiva en el que todos se pueden implicar. 
           Buscamos el apoyo de la ciudadanía, la complicidad de los barrios y la colaboración de los colectivos. Os explicamos cómo y cuándo.</p>
@@ -96,7 +96,7 @@
       </div>
       
       <div class="span4 fp-two">
-        <div class="widget-front">
+        <div class="content">
           <h2>¿Por qué queremos ganar Barcelona?</h2>
           <p class="fp-text-two">Estamos perdiendo Barcelona y queremos recuperarla. 
           Para conseguirlo, debemos  iniciar un proceso que no parta de un programa electoral cerrado y que nos permita trabajar a partir de objetivos concretos. 
@@ -106,7 +106,7 @@
       </div>
       
       <div class="span4 fp-three">
-        <div class="widget-front">
+        <div class="content">
           <h2>Financiación</h2>
           <p class="fp-text-three">También en el ámbito económico es necesaria otra forma de hacer política. 
           Nos comprometemos a hacer públicas nuestras cuentas. Esto implica, sin embargo, que no podemos renunciar a vuestra ayuda.</p>
