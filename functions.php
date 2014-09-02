@@ -81,3 +81,10 @@ function move_the_slider() {
   add_action('__starting_highlight', array(TC_slider::$instance, 'tc_slider_display'), 0);
 }
 add_action('wp_head', 'move_the_slider');
+
+/*
+* Creates an excerpt with custom length
+*/
+function g_excerpt($limit = 55) {
+  return wp_trim_words(get_the_excerpt(), $limit);
+}

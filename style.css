@@ -276,6 +276,47 @@ body.home #content > article {
         line-height: 1.6;
       }
 
+      .marketing .article-list {
+        position: relative;
+      }
+       .marketing .article-list a[data-action="see-all"] {
+          position: absolute;
+          top: -54px;
+          right: 0;
+          font-size: 11px;
+          text-decoration: underline;
+        }
+        .marketing .article-list ul {
+          list-style: none;
+          text-align: left;
+          margin: 0;
+          padding: 0;
+        }
+          .marketing .article-list ul > li.article-excerpt {
+            margin: 12px 0 0;
+            padding: 10px 0 0;
+            border-top: 1px solid #f3b0a0;
+          }
+          .marketing .article-list ul > li.article-excerpt:first-child {
+            margin: 0;
+            padding: 0;
+            border-top: none;
+          }
+            .marketing .article-list ul > li.article-excerpt h3 {
+              font-family: 'Raleway', sans-serif;
+              font-weight: 700;
+              margin: 0 0 .4em;
+            }
+              .marketing .article-list ul > li.article-excerpt h3 a {
+                color: #494443;
+              }
+            .marketing .article-list ul > li.article-excerpt p {
+              font-size: 13px;
+            }
+            .marketing .article-list ul > li.article-excerpt a[data-action="read-more"] {
+              text-decoration: underline;
+            }
+
 .fp-one{
     margin:0;
     background:#f8ebe5;

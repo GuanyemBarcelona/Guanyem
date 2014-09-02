@@ -73,10 +73,7 @@
       
       <div class="span4 fp-three">
         <div class="content">
-          <h2>Finançament</h2>
-          <p class="fp-text-three">També en l'àmbit econòmic cal una altra manera de fer política. Ens comprometem a fer públics els nostres comptes.
-          Els processos d’organització ciutadana han de garantir la seva autonomia, això implica, però, que no podem renunciar al vostre ajut.</p>
-          <a class="btn btn-primary fp-button" href="/financament/" title="Finançament">Col·labora</a>
+          <?php include 'inc/marketing_blog_articles.php'; ?>
         </div><!-- /.widget-front -->
       </div>
     </div>
@@ -107,10 +104,7 @@
       
       <div class="span4 fp-three">
         <div class="content">
-          <h2>Financiación</h2>
-          <p class="fp-text-three">También en el ámbito económico es necesaria otra forma de hacer política. 
-          Nos comprometemos a hacer públicas nuestras cuentas. Esto implica, sin embargo, que no podemos renunciar a vuestra ayuda.</p>
-          <a class="btn btn-primary fp-button" href="/es/financiacion/" title="Finançament">Colabora</a>
+          <?php include 'inc/marketing_blog_articles.php'; ?>
         </div><!-- /.widget-front -->
       </div>
     </div>
