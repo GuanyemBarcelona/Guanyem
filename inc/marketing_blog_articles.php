@@ -3,7 +3,7 @@
             <a data-action="see-all" href="/bloc/"><?php _e("Read all", "guanyem"); ?></a>
             <ul>
             <?php
-            $args = array('numberposts' => 2, 'suppress_filters' => 0);
+            $args = array('numberposts' => 2, 'post_status' => 'publish', 'suppress_filters' => false);
             $recent_posts = wp_get_recent_posts($args);
             foreach($recent_posts as $post){ ?>
               <li class="article-excerpt">
