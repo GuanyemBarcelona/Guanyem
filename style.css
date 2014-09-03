@@ -646,6 +646,12 @@ iframe#adhesions{
     .menu-menu-top-container, .menu-menu-top-castellano0-container {
         width: 70%;
     }
+
+    .marketing .article-list a[data-action="see-all"] {
+      top: -25px;
+      right: auto;
+      left: 0;
+    }
 }
 @media (max-width: 979px){
     .breadcrumbs{
