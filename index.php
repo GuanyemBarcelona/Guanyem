@@ -147,6 +147,10 @@
 
                   <?php do_action ('__after_loop');##hook of the comments and the posts navigation with priorities 10 and 20 ?>
 
+                  <?php if (is_front_page()) { ?>
+                  <?php include 'inc/home_posts.php'; ?>
+                  <?php } ?>
+
               </div><!--.article-container -->
 
          <?php do_action( '__after_article_container'); ##hook of left sidebar ?>
