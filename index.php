@@ -38,7 +38,7 @@
     <?php /*if (is_front_page()) { ?>
     <div class="video-zone">
       <div class="inner">
-        <h2><?php echo __("En directe: Roda de premsa #QuerellaPujol", "guanyem"); ?></h2>
+        <h2><?php _e("Live on the Guanyem Streaming Channel", "guanyem"); ?></h2>
         <iframe src="https://embed.bambuser.com/channel/Guanyem" width="320" height="240" frameborder="0">Your browser does not support iframes.</iframe>
         <p></p>
       </div>
