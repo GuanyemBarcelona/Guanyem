@@ -117,10 +117,11 @@ class TC_footer_main {
   function tc_colophon_left_block() {
   	$license_uri = 'http://creativecommons.org/licenses/by-sa/3.0/deed.es_ES';
   	?>
-  	<div class="span4 credits">
+  	<div class="span8 credits">
   		<p>
-  			<a rel="license" href="<?php echo $license_uri; ?>"><img alt="Licencia de Creative Commons" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png"></a><br><?php _e("This work is licensed under a", "guanyem"); ?> <a rel="license" href="<?php echo $license_uri; ?>"><?php _e("Creative Commons Attribution-ShareAlike 3.0 Unported License", "guanyem"); ?></a>.
-  			 / <?php icl_link_to_element(382); ?>
+  			<a rel="license" href="<?php echo $license_uri; ?>" class="cc-logo"><img alt="Licencia de Creative Commons" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png"></a>
+        <?php _e("This work is licensed under a", "guanyem"); ?> <a rel="license" href="<?php echo $license_uri; ?>"><?php _e("Creative Commons Attribution-ShareAlike 3.0 Unported License", "guanyem"); ?></a>.
+  			 - <?php icl_link_to_element(382); ?>
   		</p>
   	</div>
   	
@@ -151,7 +152,7 @@ class TC_footer_main {
     	echo apply_filters( 
     		'tc_colophon_center_block', 
     		sprintf('<div class="%1$s">%2$s</div>',
-    			apply_filters( 'tc_colophon_center_block_class', 'span4 social-block' ),
+    			apply_filters( 'tc_colophon_center_block_class', 'span2 social-block' ),
     			0 != tc__f( '__get_option', 'tc_social_in_footer') ? tc__f( '__get_socials' ) : ''
     		)
     	);
@@ -169,7 +170,7 @@ class TC_footer_main {
     	echo apply_filters(
     		'tc_colophon_right_block',
     		sprintf('<div class="%1$s"><p><a class="back-to-top" href="#" title="%2$s"><span>%2$s</span> <i class="fa fa-arrow-circle-up"></i></a></p></div>',
-    			apply_filters( 'tc_colophon_right_block_class', 'span4 backtop' ),
+    			apply_filters( 'tc_colophon_right_block_class', 'span2 backtop' ),
     			__( 'Back to top' , 'customizr' )
     		)
     	);
