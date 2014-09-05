@@ -505,6 +505,7 @@ h1.entry-title, h2.entry-title{
     padding-bottom:20px;
     padding-top:25px;
     line-height: 50px;
+    margin: 0;
 }
 .entry-content{
     font-size: 22px;
