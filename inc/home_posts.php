@@ -1,20 +1,16 @@
   <div class="home-posts">
-    <a data-action="see-all" href="/bloc/"><?php _e("Read all", "guanyem"); ?></a>
     <ul>
-    <?php /*
-    $args = array('posts_per_page' => 5, 'post_status' => 'publish', 'category' => icl_object_id(296, 'category', true));
-    $home_posts = get_posts($args);
-    foreach($home_posts as $post){ ?>
-      <li class="article-excerpt">
-        <?php the_excerpt(); ?> 
-      </li>
-    <?php }*/ ?>
     <?php query_posts('cat=' . icl_object_id(296, 'category', true)); ?>
     <?php if (have_posts()){ ?>
       <?php while (have_posts()){ ?>
+      <li class="article-excerpt">
         <?php the_post(); ?>
-        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+        <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+        <div class="entry-meta">
+          <?php the_time('j F, Y') ?> <?php _e("by"); ?> <?php the_author_posts_link(); ?>
+        </div>
         <?php the_excerpt(); ?>
+      </li>
       <?php } ?>
     <?php } ?>
     </ul>

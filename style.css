@@ -317,6 +317,17 @@ body.home #content > article {
               text-decoration: underline;
             }
 
+.home-posts {}
+  .home-posts > ul {
+    margin: 0;
+    padding: 0;
+  }
+    .home-posts .article-excerpt {}
+      .home-posts .article-excerpt h2.entry-title {
+        font-size: 24px;
+        padding-bottom: .5em;
+      }
+
 .fp-one{
     margin:0;
     background:#f8ebe5;
