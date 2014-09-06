@@ -1,6 +1,7 @@
   <div class="home-posts">
     <ul>
-    <?php query_posts('cat=' . icl_object_id(296, 'category', true)); ?>
+    <?php query_posts('cat=' . icl_object_id(338, 'category', true)); /*En dev sustituir por id(296 */ ?>
+   
     <?php if (have_posts()){ ?>
       <?php while (have_posts()){ ?>
       <li class="article-excerpt">
