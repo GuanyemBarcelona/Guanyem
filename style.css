@@ -35,7 +35,7 @@ a {
     text-decoration: none;
 }
 p {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Droid', sans-serif;
   font-weight: 400;
   margin: 0 0 1.2em;
 }
@@ -76,10 +76,20 @@ h4{
 #content {
   position: relative;
 }
+/*LWM lists*/
+li {
+    line-height: 1.5;
+   margin-bottom: 1em;
+}
+
 
 /* Menu top */
 /* Add by sinsistema */
 #menu-menu-top li, .menu-menu-top-castellano0-container li { float: right;line-height: normal; height: 40px;  font-family: 'Droid Serif', serif; font-weight: 700;}
+/*Add by LWM*/
+#menu-menu-top li, .menu-menu-top-castellano0-container li {  
+margin-bottom: 0;
+}
 
 /** MENU **/
 .menu a.current-menu-item {
@@ -87,7 +97,7 @@ h4{
 }
 #lang_sel_list {
     float: left;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Droid', sans-serif;
     font-weight: 400;
     height: 32px;
     position: relative;
@@ -153,7 +163,7 @@ h4{
     display: table-cell;
 }
 .navbar .nav > li > a{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Droid', sans-serif;
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
@@ -207,7 +217,7 @@ h4{
     padding: 12px;
     float: right;
     color: #ffffff;
-    font-family: 'Raleway', sans-serif; font-weight: 400; text-transform: uppercase;
+    font-family: 'Droid', sans-serif; font-weight: 400; text-transform: uppercase;
     font-size: 12px;
 }
 
@@ -254,7 +264,7 @@ body.home #content > article {
   }
     .marketing .span4 > .content {
       padding: 20px 10%;
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Droid', sans-serif;
     }
       .marketing .span4 > .content h2 {
         color: #494443;
@@ -303,7 +313,7 @@ body.home #content > article {
             border-top: none;
           }
             .marketing .article-list ul > li.article-excerpt h3 {
-              font-family: 'Raleway', sans-serif;
+              font-family: 'Droid', sans-serif;
               font-weight: 700;
               margin: 0 0 .4em;
             }
@@ -356,7 +366,7 @@ body.home #content > article {
     background: #f0a594;
     border: none;
     border-bottom: 3px solid #d38675;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Droid', sans-serif;
     font-weight: 400;
     font-size: 18px;
     -moz-border-radius: 29px;
@@ -514,7 +524,7 @@ h1.entry-title, h2.entry-title{
     text-align: justify;
 }
 .entry-content ul li{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Droid', sans-serif;
     font-weight: 500;
     font-size: 22px;
     line-height: 1.5;
@@ -554,7 +564,7 @@ footer#footer a {
 }
 footer#footer .colophon{
     background: #d42b16;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Droid', sans-serif;
     font-weight: 400;
 }
 footer#footer .colophon a, footer#footer .colophon p, footer#footer .colophon a.back-to-top {
@@ -719,7 +729,7 @@ iframe#adhesions{
         color:#494443;
     }
     #lang_sel_list, .menu-menu-top-container, .menu-menu-top-castellano0-container{
-        font-family: 'Raleway', sans-serif;
+        font-family: 'Droid', sans-serif;
         background: #ffffff;
         border-top: 1px solid #494443;
         border-bottom: 1px solid #494443;
@@ -745,6 +755,7 @@ iframe#adhesions{
         list-style:none;
         text-align: center;
     }
+
     .menu-menu-top-container li a{
         padding: 9px 15px;
         color:#494443;
