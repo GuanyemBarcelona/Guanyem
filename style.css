@@ -333,7 +333,8 @@ body.home #content > article {
     padding: 0;
     list-style: none;
   }
-    .home-posts .article-excerpt {}
+  
+    .home-posts .article-excerpt li{ list-style: none outside none;}
       .home-posts .article-excerpt h2.entry-title {
         font-size: 24px;
         padding-bottom: .5em;
