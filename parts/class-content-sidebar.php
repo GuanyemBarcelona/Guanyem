@@ -71,6 +71,11 @@ class TC_sidebar {
                             $position
       );
 
+      // banner teaming
+      $banner_teaming_id = 2367; // 2026 in DEV
+      if (ICL_LANGUAGE_CODE == 'es') $banner_teaming_id = 2369; // 2025 in DEV
+      $banner_teaming_img = wp_get_attachment_image($banner_teaming_id, 'full');
+
       // banner whatsapp + telegram
       $banner_whatsapp_id = 1587; // 980 in DEV
       if (ICL_LANGUAGE_CODE == 'es') $banner_whatsapp_id = 1588; // 982 in DEV
@@ -81,6 +86,9 @@ class TC_sidebar {
        
       <div class="<?php echo $class  ?>">
          <div id="<?php echo $position ?>" class="widget-area" role="complementary">
+            <div class="banner banner-teaming">
+              <a href="https://www.teaming.net/guanyembarcelona" rel="external"><?php print $banner_teaming_img; ?></a>
+            </div>
 
             <div class="banner banner-whatsapp">
               <?php print $banner_whatsapp_img; ?>
