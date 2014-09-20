@@ -16,6 +16,12 @@ var config = {
   $(window).ready(function(){
     config.LANGUAGE = $('html').attr('lang');
 
+    // For all links, if rel external open link in new tab
+    $('body').on('click', 'a[rel="external"]', function(ev){
+      ev.preventDefault();
+      window.open($(this).attr('href'));
+    });
+
     // sharing buttons
     prepareSharingButtons();
 
