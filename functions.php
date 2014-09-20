@@ -88,3 +88,42 @@ add_action('wp_head', 'move_the_slider');
 function g_excerpt($limit = 55) {
   return wp_trim_words(get_the_excerpt(), $limit);
 }
+
+/*
+* Returns a list of other social links not included in the Theme's config. That means two places to edit this stuff. Annoying, not my fault :S
+*/
+function g_get_other_social_links(){
+  $other_social_links = array(
+    'tumblr' => array(
+      'name' => 'Tumblr',
+      'link' => 'http://guanyembarcelona.tumblr.com/',
+    ),
+  );
+  return $other_social_links;
+}
+
+/*
+* Returns html for all extra social links
+*/
+function g_html_other_social_links() {
+  $links = g_get_other_social_links();
+  $html = '';
+  foreach ($links as $key => $link) {
+    $html .= '<a class="social-icon icon-' . $key . '" href="' . $link['link'] . '" title="' . __("Follow me on", "guanyem") . ' ' . $link['name'] . '" rel="external"></a>';
+  }
+  return $html;
+}
+
+/* custom social links in header */
+function g_custom_social_in_header($resp) {
+  $class = ('resp' == $resp) ? '':'span5'; 
+  ?>
+  <div class="social-block <?php echo $class ?>">
+    <?php if (0 != tc__f('__get_option', 'tc_social_in_header')){ ?>
+       <?php echo tc__f('__get_socials') ?>
+       <?php echo g_html_other_social_links(); ?>
+    <?php } ?>
+  </div><!--.social-block-->
+  <?php
+}
+add_filter('tc_social_in_header', 'g_custom_social_in_header');

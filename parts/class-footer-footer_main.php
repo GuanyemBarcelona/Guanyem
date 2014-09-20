@@ -151,9 +151,10 @@ class TC_footer_main {
   function tc_colophon_center_block() {
     	echo apply_filters( 
     		'tc_colophon_center_block', 
-    		sprintf('<div class="%1$s">%2$s</div>',
+    		sprintf('<div class="%1$s">%2$s %3$s</div>',
     			apply_filters( 'tc_colophon_center_block_class', 'span2 social-block' ),
-    			0 != tc__f( '__get_option', 'tc_social_in_footer') ? tc__f( '__get_socials' ) : ''
+    			0 != tc__f( '__get_option', 'tc_social_in_footer') ? tc__f( '__get_socials' ) : '',
+          g_html_other_social_links()
     		)
     	);
   }

@@ -182,9 +182,9 @@ margin-bottom: 0;
 .navbar-inner .social-block{
     background: #fff;
     float: left;
-    width:20%;
+    width:22%;
     margin: 0;
-    padding: 8px 0;
+    padding: 8px 0 0 2%;
     height: 40px;
 }
 .navbar .navbar-inner{
@@ -203,7 +203,7 @@ margin-bottom: 0;
 .social-block a {
     float: left;
     color: #494443;
-    padding: 0 10px;
+    padding: 0 7px;
     width: auto;
     height: auto;
     text-shadow:none;
@@ -211,6 +211,9 @@ margin-bottom: 0;
 .social-block a:hover {
     color:#d42b15;
     text-shadow:none;
+}
+.icon-tumblr:before {
+  content: "\f214";
 }
 
 .menu a{
