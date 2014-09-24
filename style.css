@@ -154,8 +154,8 @@ margin-bottom: 0;
     left: 0;
     display: table;
     float: left;
-    margin: 0 2%;
-    width: 96%;
+    margin: 0 0 0 2%;
+    width: 98%;
     padding: 0;
 }
 .navbar .nav > li{
@@ -168,7 +168,7 @@ margin-bottom: 0;
     text-transform: uppercase;
     text-align: center;
     color: #494443;
-    font-size: 16px;
+    font-size: 14px;
     padding: 36px 0 30px 0;
 }
 .navbar .nav > li > a:hover, .navbar .nav > li.current-menu-item > a, .navbar .nav > li.current-menu-ancestor > a{
@@ -245,6 +245,85 @@ margin-bottom: 0;
     display:table-cell;
     float: right;
 }
+
+/* Search form */
+/* The "Search for" text is needed for screen readers, but we move it off screen, so we won't see it */
+.search-form .screen-reader-text {
+  position: absolute;
+  left: -9999px;
+  overflow: hidden;
+}
+.search-header {}
+  .search-header .search-form {
+    overflow: hidden;
+    padding: 14px 0 0;
+  }
+    .search-header .search-form > label {
+      float: left;
+      width: 73%;
+      margin-right: 2%;
+      padding: 0 2% 0 0;
+    }
+      .search-header .search-form > label input[type="search"] {
+        width: 100%;
+      }
+    .search-header .search-form > input[type="submit"] {
+      float: right;
+      width: 21%;
+    }
+/* header Search */
+.my-nav-menu-search {
+  padding-left: 2%;
+}
+.my-nav-menu-search form {
+  margin: 0;
+  padding: 0;
+}
+/*Stop the display of the Search button*/
+.my-nav-menu-search .search-submit {
+  display: none;
+}
+/* Style the search input textbox */
+.my-nav-menu-search .search-field {
+  background: transparent;
+  border: none;
+  -webkit-box-shadow:    none;
+  -moz-box-shadow:       none;
+  box-shadow:            none;
+  cursor: pointer;
+  height: 26px;
+  margin: 2px 0 2px 0;
+  padding: 0 0 0 25px;
+  position: relative;
+  -webkit-transition: width 400ms ease;
+  -moz-transition:    width 400ms ease;
+  -o-transition:      width 400ms ease;
+  transition:         width 400ms ease;
+  width: 0px;
+}
+/* Expand the search box when you click it */
+.my-nav-menu-search .search-field:active,
+.my-nav-menu-search .search-field:focus {
+  color: #5a5a5a;
+  /* change the colour above if you are working with a dark navbar background */
+  border: 2px solid #c3c0ab;
+  cursor: text;
+  outline: 0;
+  width: 70px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow:    none;
+  box-shadow:         none;
+  margin: 0;
+}
+.my-nav-menu-search .search-form:before {
+  font-family: 'genericons';
+  content: '\f400';
+  position: absolute; /* this is the key to put it visually inside the search field */
+  font-size: 19px;
+  font-weight: normal;
+  padding-top: 0; /* tune this vertical alignment inside the search field, as needed */
+  padding-left: 5px; /* tune this horizontal alignment inside the search field, as needed */
+}4/* ------- */
 
 /*** HOME ***/
 body.home #content > article {
@@ -469,6 +548,9 @@ body.home .video-zone {}
   right: 0;
   overflow: hidden;
   margin: 10px 0 0;
+}
+body.search-results .sharing-buttons {
+  display: none;
 }
   .sharing-buttons h2 {
     margin: 0;

@@ -127,3 +127,11 @@ function g_custom_social_in_header($resp) {
   <?php
 }
 add_filter('tc_social_in_header', 'g_custom_social_in_header');
+
+/* Html5 search form */
+function g_add_search_form_to_menu($items, $args) {
+  if( !($args->theme_location == 'main')) return $items;
+  return $items . '<li class="my-nav-menu-search">' . get_search_form(false) . '</li>';
+}
+add_theme_support('html5', array('search-form'));
+add_filter('wp_nav_menu_items', 'g_add_search_form_to_menu', 10, 2);
