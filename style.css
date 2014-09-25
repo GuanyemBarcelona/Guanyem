@@ -165,20 +165,30 @@ li {
 .navbar .nav > li > a:hover, .navbar .nav > li.current-menu-item > a, .navbar .nav > li.current-menu-ancestor > a{
     color: #df6050;
 }
-.menu-menu-top-container, .menu-menu-top-castellano0-container{
+.menu-menu-top-container, .menu-menu-top-castellano0-container {
     background: #494443;
     float: left;
     width: 60%;
-    overflow: hidden;
 }
-  #menu-menu-top li, .menu-menu-top-castellano0-container li { 
-    float: right;
-    line-height: normal; 
-    height: 40px; 
-    font-family: 'Droid', serif; 
-    font-weight: 700;
-    margin-bottom: 0;
-  }
+  .menu-menu-top-container ul, .menu-menu-top-castellano0-container ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  } 
+    .menu-menu-top-container li, .menu-menu-top-castellano0-container li {
+      float: right;
+      height: 40px;
+      margin-bottom: 0;
+    }
+      .menu-menu-top-container li a, .menu-menu-top-castellano0-container li a {
+        display: block;
+        padding: 10px 12px;
+        color: #ffffff;
+        font-family: 'Droid', sans-serif; 
+        font-weight: 400; 
+        text-transform: uppercase;
+        font-size: 12px;
+      }
 .navbar-inner .social-block{
     background: #fff;
     float: left;
@@ -214,14 +224,6 @@ li {
 }
 .icon-tumblr:before {
   content: "\f214";
-}
-
-.menu a{
-    padding: 12px;
-    float: right;
-    color: #ffffff;
-    font-family: 'Droid', sans-serif; font-weight: 400; text-transform: uppercase;
-    font-size: 12px;
 }
 
 /* tc header */
