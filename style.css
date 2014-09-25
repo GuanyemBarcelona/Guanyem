@@ -82,15 +82,6 @@ li {
    margin-bottom: 1em;
 }
 
-
-/* Menu top */
-/* Add by sinsistema */
-#menu-menu-top li, .menu-menu-top-castellano0-container li { float: right;line-height: normal; height: 40px;  font-family: 'Droid Serif', serif; font-weight: 700;}
-/*Add by LWM*/
-#menu-menu-top li, .menu-menu-top-castellano0-container li {  
-margin-bottom: 0;
-}
-
 /** MENU **/
 .menu a.current-menu-item {
   text-decoration: underline;
@@ -178,7 +169,16 @@ margin-bottom: 0;
     background: #494443;
     float: left;
     width: 60%;
+    overflow: hidden;
 }
+  #menu-menu-top li, .menu-menu-top-castellano0-container li { 
+    float: right;
+    line-height: normal; 
+    height: 40px; 
+    font-family: 'Droid', serif; 
+    font-weight: 700;
+    margin-bottom: 0;
+  }
 .navbar-inner .social-block{
     background: #fff;
     float: left;
