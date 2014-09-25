@@ -256,6 +256,10 @@ li {
   overflow: hidden;
 }
 .search-header {}
+  .search-header h1 {}
+    .search-header h1 span {
+      text-decoration: underline;
+    }
   .search-header .search-form {
     overflow: hidden;
     padding: 14px 0 0;
