@@ -271,11 +271,12 @@ li {
       padding: 0 2% 0 0;
     }
       .search-header .search-form > label input[type="search"] {
-        width: 100%;
+        width: 95%;
       }
     .search-header .search-form > input[type="submit"] {
       float: right;
       width: 21%;
+      font-family: 'genericons';
     }
 /* header Search */
 .my-nav-menu-search {
