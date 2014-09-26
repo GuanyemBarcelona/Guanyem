@@ -57,7 +57,7 @@ h2{
     font-weight: 900;
     font-size: 30px;
     color: #838383;
-    line-height: 39px;
+    line-height: 1.4;
     margin-bottom: 20px;
 }
 h3{
@@ -105,7 +105,7 @@ li {
     border-top: none;
 }
 #lang_sel_list ul a, #lang_sel_list_list ul a:visited {
-    line-height: 1.4em;
+    line-height: 1.4;
     background:none;
     color:#fff;
 }
@@ -607,7 +607,7 @@ h1.entry-title, h2.entry-title{
     color: #494443;
     padding-bottom:20px;
     padding-top:25px;
-    line-height: 50px;
+    line-height: 1.4;
     margin: 0;
 }
 .entry-content{
