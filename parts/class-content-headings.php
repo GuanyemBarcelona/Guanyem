@@ -52,12 +52,12 @@ class TC_headings {
       if ( is_search() && !is_singular() ) {
         $header_class   = 'search-header';
         $content        = sprintf( '<div class="row-fluid"><div class="%1$s"><h1 class="%2$s">%3$s%4$s %5$s </h1></div><div class="%6$s">%7$s</div></div>',
-              apply_filters( 'tc_search_result_header_title_class', 'span10' ),
+              apply_filters( 'tc_search_result_header_title_class', 'span9' ),
               apply_filters( 'tc_archive_icon', 'format-icon' ),
               have_posts() ? '' :  __( 'No' , 'customizr' ).'&nbsp;' ,
               apply_filters( 'tc_search_results_title' , __( 'Search Results for :' , 'customizr' ) ),
               '<span>' . get_search_query() . '</span>',
-              apply_filters( 'tc_search_result_header_form_class', 'span2' ),
+              apply_filters( 'tc_search_result_header_form_class', 'span3' ),
               have_posts() ? get_search_form(false) : ''
         );
         $content       = apply_filters( 'tc_search_results_header_content', $content );
