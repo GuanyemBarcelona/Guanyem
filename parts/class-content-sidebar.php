@@ -71,6 +71,13 @@ class TC_sidebar {
                             $position
       );
 
+      // banner collaborate
+      $banner_collaborate_id = 2107; // in PRO // 2107; // in DEV
+      if (ICL_LANGUAGE_CODE == 'es') $banner_teaming_id = 2107; // in PRO // xxxx; // in DEV
+      $banner_collaborate_img = wp_get_attachment_image($banner_collaborate_id, 'full');
+      $banner_collaborate_pageid = icl_object_id(2059, 'page', false);  // in PRO // 2059; // in DEV
+      $banner_collaborate_url = get_permalink($banner_collaborate_pageid);
+
       // banner teaming
       $banner_teaming_id = 2367; // in PRO // 2026; // in DEV
       if (ICL_LANGUAGE_CODE == 'es') $banner_teaming_id = 2369; // in PRO // 2025; // in DEV
@@ -87,6 +94,10 @@ class TC_sidebar {
       <div class="<?php echo $class  ?>">
          <div id="<?php echo $position ?>" class="widget-area" role="complementary">
             <?php if (is_front_page()) { ?>
+            <div class="banner banner-collaborate">
+              <a href="<?php print $banner_collaborate_url; ?>"><?php print $banner_collaborate_img; ?></a>
+            </div>
+
             <div class="banner banner-teaming">
               <a href="https://www.teaming.net/guanyembarcelona" rel="external"><?php print $banner_teaming_img; ?></a>
             </div>
