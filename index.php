@@ -6,6 +6,8 @@
  * @package Customizr
  * @since Customizr 1.0
  */
+
+define('STREAMING_HOME_ACTIVATED', FALSE);
 ?>
 <?php do_action( '__before_main_wrapper' ); ##hook of the header with get_header ?>
 <div id="main-wrapper" class="<?php echo tc__f( 'tc_main_wrapper_classes' , 'container' ) ?>">
@@ -13,37 +15,36 @@
   <div id="highlight-zone">
     <?php do_action('__starting_highlight'); ?>
 
-    <?php
-    // the post video
-    $video_id = get_field('video_youtube_id');
-    $video_title = get_field('video_title');
-    $video_lead = get_field('video_lead');
-    if (isset($video_id) && $video_id != ''){ ?>
-    <div class="video-zone">
-      <div class="inner">
-        <?php if (isset($video_title)){ ?>
-        <h2><?php echo $video_title; ?></h2>
-        <?php } ?>
-        <iframe width="320" height="180" src="//www.youtube.com/embed/<?php echo $video_id; ?>?autoplay=0&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
-        <?php if (isset($video_lead)){ ?>
-        <p><?php echo $video_lead; ?></p>
-        <?php } ?>
+    <?php if (is_front_page()) { ?>
+      <?php if (STREAMING_HOME_ACTIVATED){ ?>
+      <div class="video-zone">
+        <div class="inner">
+          <h2><?php _e("Live on the Guanyem Streaming Channel", "guanyem"); ?></h2>
+          <iframe src="https://embed.bambuser.com/channel/Guanyem" width="320" height="240" frameborder="0">Your browser does not support iframes.</iframe>
+          <p></p>
+        </div>
       </div>
-    </div>
+      <?php }else{ ?>
+      <?php 
+        // the post video
+        $video_id = get_field('video_youtube_id');
+        $video_title = get_field('video_title');
+        $video_lead = get_field('video_lead');
+        if (isset($video_id) && $video_id != ''){ ?>
+        <div class="video-zone">
+          <div class="inner">
+            <?php if (isset($video_title)){ ?>
+            <h2><?php echo $video_title; ?></h2>
+            <?php } ?>
+            <iframe width="320" height="180" src="//www.youtube.com/embed/<?php echo $video_id; ?>?autoplay=0&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
+            <?php if (isset($video_lead)){ ?>
+            <p><?php echo $video_lead; ?></p>
+            <?php } ?>
+          </div>
+        </div>
+        <?php } ?>
+      <?php } ?>
     <?php } ?>
-
-    <?php 
-    // streaming en la Home
-    ?>
-    <?php /*if (is_front_page()) { ?>
-    <div class="video-zone">
-      <div class="inner">
-        <h2><?php _e("Live on the Guanyem Streaming Channel", "guanyem"); ?></h2>
-        <iframe src="https://embed.bambuser.com/channel/Guanyem" width="320" height="240" frameborder="0">Your browser does not support iframes.</iframe>
-        <p></p>
-      </div>
-    </div>
-    <?php }*/ ?>
 
   </div>
 
