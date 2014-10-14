@@ -133,6 +133,9 @@ define('STREAMING_HOME_ACTIVATED', FALSE);
                       <?php endif; ?>
 
                       <?php if ( have_posts() && !is_404() ) : ?>
+                        <?php if (!is_single()){ ?>
+                        <div class="article-list">
+                        <?php } ?>
                           <?php while ( have_posts() ) : ##all other cases for single and lists: post, custom post type, page, archives, search, 404 ?>
                               <?php the_post(); ?>
 
@@ -143,6 +146,9 @@ define('STREAMING_HOME_ACTIVATED', FALSE);
                               <?php do_action ('__after_article') ?>
 
                           <?php endwhile; ?>
+                        <?php if (!is_single()){ ?>
+                        </div>
+                        <?php } ?>
 
                       <?php endif; ##end if have posts ?>
 
