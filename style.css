@@ -345,6 +345,11 @@ h1.entry-title, h2.entry-title{
   line-height: 1.4;
   margin: 0;
 }
+.article-list {}
+  .article-list article.type-press h2.entry-title {
+    font-size: 24px;
+    padding: 0;
+  }
 .entry-content{
   font-size: 22px;
   line-height: 1.5;
