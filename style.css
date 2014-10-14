@@ -330,7 +330,36 @@ li {
   font-weight: normal;
   padding-top: 0; /* tune this vertical alignment inside the search field, as needed */
   padding-left: 5px; /* tune this horizontal alignment inside the search field, as needed */
-}4/* ------- */
+}
+/* ------- */
+
+/* Posts */
+h1.entry-title, h2.entry-title{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  font-size: 35px;
+  float: left;
+  color: #494443;
+  padding-bottom:20px;
+  padding-top:25px;
+  line-height: 1.4;
+  margin: 0;
+}
+.entry-content{
+  font-size: 22px;
+  line-height: 1.5;
+  text-align: justify;
+}
+.entry-content ul li {
+  font-family: 'Droid', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.5;
+  text-align: justify;
+}
+.entry-content a.link,.entry-content a.hover{
+  color:#d42b15;
+}
 
 /*** HOME ***/
 body.home #content > article {
@@ -600,32 +629,6 @@ body.search-results .sharing-buttons {
 .safari article.page .format-icon:before, .chrome article.page .format-icon:before, .format-icon:before {
     display:none;
 }
-h1.entry-title, h2.entry-title{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 900;
-    font-size: 35px;
-    float: left;
-    color: #494443;
-    padding-bottom:20px;
-    padding-top:25px;
-    line-height: 1.4;
-    margin: 0;
-}
-.entry-content{
-    font-size: 22px;
-    line-height: 1.5;
-    text-align: justify;
-}
-.entry-content ul li{
-    font-family: 'Droid', sans-serif;
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 1.5;
-    text-align: justify;
-}
-.entry-content a.link,.entry-content a.hover{
-    color:#d42b15;
-}
 
 .nombre{
     font-size: 21px;
@@ -642,6 +645,7 @@ h1.entry-title, h2.entry-title{
     font-size: 19px;
     color: #716b6a;
 }
+
 /***  FOOTER ****/
 footer#footer {
     color: #ffffff !important;
