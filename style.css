@@ -460,7 +460,7 @@ body.home #content > article {
     .home-posts .article-excerpt li{ list-style: none outside none;}
       .home-posts .article-excerpt h2.entry-title {
         font-size: 24px;
-        margin-bottom: .5em;
+        padding-bottom: .5em;
       }
 
 .fp-one{
