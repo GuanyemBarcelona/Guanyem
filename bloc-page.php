@@ -33,14 +33,12 @@ Template Name: Bloc
                     <?php do_action ('__after_loop');##hook of the comments and the posts navigation with priorities 10 and 20 ?>
 
                 </div><!--.article-container -->
+                
                 <div class="span3 right tc-sidebar">
-
-          <div id="right" class="widget-area" role="complementary">
-
-<?php if ( dynamic_sidebar('guanyem_bloc') ) : else : endif; ?>
-</div>
-
-</div>
+                  <div id="right" class="widget-area" role="complementary">
+                    <?php if ( dynamic_sidebar('guanyem_bloc') ) : else : endif; ?>
+                  </div>
+                </div>
 
         </div><!--.row -->
     </div><!-- .container role: main -->
