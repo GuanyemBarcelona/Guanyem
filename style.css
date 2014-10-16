@@ -75,6 +75,7 @@ h4{
 
 #content {
   position: relative;
+  padding: 2em 0 0;
 }
 /*LWM lists*/
 li {
@@ -344,9 +345,7 @@ h1.entry-title, h2.entry-title{
   padding: 0;
   line-height: 1.4;
 }
-.article-list {
-  padding: 2em 0 0;
-}
+.article-list {}
   .article-list article.type-press h2.entry-title {
     font-size: 24px;
     padding: 0;
