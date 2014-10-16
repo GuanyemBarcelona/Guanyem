@@ -348,7 +348,7 @@ h1.entry-title, h2.entry-title{
 .article-list {}
   .article-list article.type-press h2.entry-title {
     font-size: 24px;
-    padding: 0;
+    margin: 0;
   }
 .entry-content{
   font-size: 22px;
@@ -460,7 +460,7 @@ body.home #content > article {
     .home-posts .article-excerpt li{ list-style: none outside none;}
       .home-posts .article-excerpt h2.entry-title {
         font-size: 24px;
-        padding-bottom: .5em;
+        margin-bottom: .5em;
       }
 
 .fp-one{
