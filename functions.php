@@ -45,6 +45,55 @@ function g_scripts() {
 add_action( 'wp_enqueue_scripts', 'g_scripts');
 
 /*
+* create taxonomies
+*/
+function g_create_taxonomies() {
+  // Add press tags taxonomy
+  $labels = array(
+    'name'                       => _x('Press tags', 'taxonomy general name'),
+    'singular_name'              => _x('Press tag', 'taxonomy singular name'),
+    'search_items'               => __('Search Press tags'),
+    'popular_items'              => __('Popular Press tags'),
+    'all_items'                  => __('All Press tags'),
+    'parent_item'                => null,
+    'parent_item_colon'          => null,
+    'edit_item'                  => __('Edit Press tag'),
+    'update_item'                => __('Update Press tag'),
+    'add_new_item'               => __('Add New Press tag'),
+    'new_item_name'              => __('New Press tag'),
+    'separate_items_with_commas' => __('Separate tags with commas'),
+    'add_or_remove_items'        => __('Add or remove tags'),
+    'choose_from_most_used'      => __('Choose from the most used Press tags'),
+    'not_found'                  => __('No Press tags found.'),
+    'menu_name'                  => __('Press tags'),
+  );
+  $args = array(
+    'hierarchical'          => false,
+    'labels'                => $labels,
+    'show_ui'               => true,
+    'show_admin_column'     => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var'             => true,
+    'rewrite'               => array('slug' => 'press-tag'),
+  );
+  register_taxonomy('press_tag', 'press', $args);
+}
+add_action('init', 'g_create_taxonomies', 0);
+
+/*
+TODO: Trying to make a link like /press-tag/sometag/ to work
+*/
+/*function g_query_post_type($query) {
+  if(is_category() || is_tag()) {
+    $post_type = get_query_var('post_type');
+    if ($post_type == '') $post_type = array('post', 'press');
+    $query->set('post_type', $post_type);
+    return $query;
+  }
+}
+add_filter('pre_get_posts', 'g_query_post_type');*/
+
+/*
 * init hook: create post type press
 */
 function gcreate_post_type_press() {
