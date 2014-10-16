@@ -45,6 +45,36 @@ function g_scripts() {
 add_action( 'wp_enqueue_scripts', 'g_scripts');
 
 /*
+* init hook: create post type press
+*/
+function gcreate_post_type_press() {
+  register_post_type('press',
+    array(
+      'labels' => array(
+        'name' => _x('Press', 'press post type'),
+        'singular_name' => _x('Press', 'press post type'),
+        'add_new_item' => __('Add New Press article'),
+      ),
+    	'public' => true,
+    	'menu_position' => 5,
+    	'menu_icon' => 'dashicons-media-document',
+    	'has_archive' => true,
+    )
+  );
+}
+add_action('init', 'gcreate_post_type_press');
+add_post_type_support('press', 'author');
+
+/*function add_custom_types_to_archive($query) {
+  if ($query->is_archive()){
+    $query->set('post_type', array('post', 'press'));
+  }
+  return $query;
+}
+add_action('pre_get_posts', 'add_custom_types_to_archive');*/
+
+
+/*
 * create taxonomies
 */
 function g_create_taxonomies() {
@@ -92,35 +122,6 @@ TODO: Trying to make a link like /press-tag/sometag/ to work
   }
 }
 add_filter('pre_get_posts', 'g_query_post_type');*/
-
-/*
-* init hook: create post type press
-*/
-function gcreate_post_type_press() {
-  register_post_type('press',
-    array(
-      'labels' => array(
-        'name' => _x('Press', 'press post type'),
-        'singular_name' => _x('Press', 'press post type'),
-        'add_new_item' => __('Add New Press article'),
-      ),
-    	'public' => true,
-    	'menu_position' => 5,
-    	'menu_icon' => 'dashicons-media-document',
-    	'has_archive' => true,
-    )
-  );
-}
-add_action('init', 'gcreate_post_type_press');
-add_post_type_support('press', 'author');
-
-/*function add_custom_types_to_archive($query) {
-  if ($query->is_archive()){
-    $query->set('post_type', array('post', 'press'));
-  }
-  return $query;
-}
-add_action('pre_get_posts', 'add_custom_types_to_archive');*/
 
 function move_the_slider() {
   //we unhook the slider
