@@ -340,10 +340,9 @@ h1.entry-title, h2.entry-title{
   font-size: 35px;
   float: left;
   color: #494443;
-  padding-bottom:20px;
-  padding-top:25px;
+  margin: 0 0 .8em;
+  padding: 0;
   line-height: 1.4;
-  margin: 0;
 }
 .article-list {
   padding: 2em 0 0;
