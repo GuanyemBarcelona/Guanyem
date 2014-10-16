@@ -345,7 +345,9 @@ h1.entry-title, h2.entry-title{
   line-height: 1.4;
   margin: 0;
 }
-.article-list {}
+.article-list {
+  padding: 2em 0 0;
+}
   .article-list article.type-press h2.entry-title {
     font-size: 24px;
     padding: 0;
@@ -595,6 +597,7 @@ body.search-results .sharing-buttons {
 }
   .sharing-buttons h2 {
     margin: 0;
+    padding: .5em 0 0;
     float: left;
     font-size: 12px;
     line-height: 1.6;
