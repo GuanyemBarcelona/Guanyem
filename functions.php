@@ -59,6 +59,7 @@ function gcreate_post_type_press() {
     	'menu_position' => 5,
     	'menu_icon' => 'dashicons-media-document',
     	'has_archive' => true,
+      //'taxonomies' => array('press_tag'),
     )
   );
 }
