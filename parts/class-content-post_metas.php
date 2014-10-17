@@ -153,16 +153,17 @@ class TC_post_metas {
      *
      */
     function tc_tag_list() {
-
-        
-        
-        $posttags                   = apply_filters( 'tc_tag_meta_list', get_the_tags() );
+        $type = get_post_type(get_the_ID());
+        $taxonomy = 'post_tag';
+        if ($type == 'press') $taxonomy = 'press_tag';
+          
+        $posttags                   = apply_filters( 'tc_tag_meta_list', get_the_terms(get_the_ID(), $taxonomy));
         $html                       = false;
         if ( $posttags) {
             foreach( $posttags as $tag) {
                 $html               .= sprintf('<a class="%1$s" href="%2$s" title="%3$s"> %4$s </a>',
                                             apply_filters( 'tc_tag_list_class', 'btn btn-mini btn-tag' ),
-                                            get_tag_link( $tag->term_id ),
+                                            get_term_link($tag->term_id, $taxonomy),
                                             esc_attr( sprintf( __( "View all posts in %s", 'customizr' ), $tag->name ) ),
                                             $tag->name
                 );
