@@ -339,15 +339,17 @@ h1.entry-title, h2.entry-title{
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
   font-size: 35px;
-  float: left;
   color: #494443;
   margin: 0 0 .8em;
   padding: 0;
   line-height: 1.4;
 }
 .press-list-container article.type-press h2.entry-title {
-  font-size: 24px;
+  font-size: 20px;
   margin: 0;
+}
+article.type-press .tc-content {
+  margin-bottom: 10px;
 }
 .entry-content{
   font-size: 22px;
