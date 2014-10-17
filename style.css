@@ -345,11 +345,10 @@ h1.entry-title, h2.entry-title{
   padding: 0;
   line-height: 1.4;
 }
-.article-list {}
-  .article-list article.type-press h2.entry-title {
-    font-size: 24px;
-    margin: 0;
-  }
+.press-list-container article.type-press h2.entry-title {
+  font-size: 24px;
+  margin: 0;
+}
 .entry-content{
   font-size: 22px;
   line-height: 1.5;
