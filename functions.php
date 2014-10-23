@@ -79,6 +79,32 @@ add_action('pre_get_posts', 'add_custom_types_to_archive');*/
 * create taxonomies
 */
 function g_create_taxonomies() {
+  // Add press categories taxonomy
+  $labels = array(
+    'name'                       => _x('Press categories', 'taxonomy general name'),
+    'singular_name'              => _x('Press category', 'taxonomy singular name'),
+    'search_items'               => __('Search Press categories'),
+    'popular_items'              => __('Popular Press categories'),
+    'all_items'                  => __('All Press categories'),
+    'parent_item'                => null,
+    'parent_item_colon'          => null,
+    'edit_item'                  => __('Edit Press category'),
+    'update_item'                => __('Update Press category'),
+    'add_new_item'               => __('Add New Press category'),
+    'new_item_name'              => __('New Press category'),
+    'menu_name'                  => __('Press categories'),
+  );
+  $args = array(
+    'hierarchical'          => true,
+    'labels'                => $labels,
+    'show_ui'               => true,
+    'show_admin_column'     => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var'             => true,
+    'rewrite'               => array('slug' => 'category-tag'),
+  );
+  register_taxonomy('press_category', 'press', $args);
+  
   // Add press tags taxonomy
   $labels = array(
     'name'                       => _x('Press tags', 'taxonomy general name'),
