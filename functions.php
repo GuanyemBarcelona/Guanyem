@@ -111,18 +111,7 @@ function g_create_taxonomies() {
 }
 add_action('init', 'g_create_taxonomies', 0);
 
-/*
-TODO: Trying to make a link like /press-tag/sometag/ to work
-*/
-/*function g_query_post_type($query) {
-  if(is_category() || is_tag()) {
-    $post_type = get_query_var('post_type');
-    if ($post_type == '') $post_type = array('post', 'press');
-    $query->set('post_type', $post_type);
-    return $query;
-  }
-}
-add_filter('pre_get_posts', 'g_query_post_type');*/
+
 
 function move_the_slider() {
   //we unhook the slider
