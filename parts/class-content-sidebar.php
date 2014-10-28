@@ -73,9 +73,9 @@ class TC_sidebar {
 
       // banner collaborate
       $banner_collaborate_id = 2107; // in PRO // 2107; // in DEV
-      if (ICL_LANGUAGE_CODE == 'es') $banner_teaming_id = 2107; // in PRO // xxxx; // in DEV
+      if (ICL_LANGUAGE_CODE == 'es') $banner_collaborate_id = 2107; // in PRO // xxxx; // in DEV
       $banner_collaborate_img = wp_get_attachment_image($banner_collaborate_id, 'full');
-      $banner_collaborate_pageid = icl_object_id(2059, 'page', false);  // in PRO // 2059; // in DEV
+      $banner_collaborate_pageid = icl_object_id(2077, 'page', false);  // in PRO // 2077; // in DEV
       $banner_collaborate_url = get_permalink($banner_collaborate_pageid);
 
       // banner teaming
