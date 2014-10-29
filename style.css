@@ -661,6 +661,9 @@ form {}
 }
 /* payment form */
 form#payment-form {}
+  form#payment-form input[type="text"] {
+    width: 100%;
+  }
   form#payment-form label.checkbox {
     margin-left: 180px;
   }
