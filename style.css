@@ -351,7 +351,8 @@ h1.entry-title, h2.entry-title{
 article.type-press .tc-content {
   margin-bottom: 10px;
 }
-.entry-content{
+.entry-content {}
+.entry-content p {
   font-size: 22px;
   line-height: 1.5;
   text-align: justify;
@@ -841,10 +842,6 @@ iframe#adhesions{
         margin-bottom:10px;
 
     }
-    .entry-content {
-        font-size: 1em;
-    }
-
 
     #lang_sel_list.lang_sel_list_vertical li, #lang_sel_list.lang_sel_list_vertical a, #lang_sel_list.lang_sel_list_vertical a:visited{
         background: #ffffff;
