@@ -654,6 +654,22 @@ body.search-results .sharing-buttons {
     color: #716b6a;
 }
 
+/*** FORMS ***/
+form {}
+.entry-content form p {
+  font-size: 14px;
+}
+/* payment form */
+form#payment-form {}
+  .general-conditions-wrapper {
+    width: 70%;
+    height: 12em;
+    overflow-y: scroll;
+    margin: 0 auto;
+    padding: 2em;
+    background: #efefef;
+  }
+
 /***  FOOTER ****/
 footer#footer {
     color: #ffffff !important;
