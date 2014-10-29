@@ -661,14 +661,18 @@ form {}
 }
 /* payment form */
 form#payment-form {}
-  form#payment-form label.checkbox {
-    margin-left: 180px;
+  form#payment-form.form-horizontal .controls {
+    margin-left: 0;
+  }
+  form#payment-form.form-horizontal .control-label {
+    float: none;
+    width: auto;
+    text-align: left;
   }
   form#payment-form .general-conditions-wrapper {
     width: 70%;
     height: 13em;
     overflow-y: scroll;
-    margin-left: 180px;
     padding: 1em 2em;
     background: #efefef;
     text-transform: uppercase;
