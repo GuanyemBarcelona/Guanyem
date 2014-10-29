@@ -661,12 +661,8 @@ form {}
 }
 /* payment form */
 form#payment-form {}
-  
   form#payment-form.form-horizontal .controls {
     margin-left: 0;
-  }
-  form#payment-form input[type="text"] {
-    width: 100%;
   }
   form#payment-form.form-horizontal .control-label {
     float: none;
