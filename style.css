@@ -655,7 +655,9 @@ body.search-results .sharing-buttons {
 }
 
 /*** FORMS ***/
-form {}
+form {
+  font-family: 'Raleway', sans-serif;
+}
 .entry-content form p {
   font-size: 14px;
 }
@@ -678,7 +680,6 @@ form button, form input[type="submit"] {
   background: #f0a594;
   border: none;
   border-bottom: 4px solid #d38675;
-  font-family: 'Raleway', sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   font-size: 14px;
@@ -696,6 +697,15 @@ form button:hover, form input[type="submit"]:hover {
 }
 /* payment form */
 form#payment-form {}
+  form#payment-form fieldset {
+    padding: 1em 0 1em;
+    border-top: 1px solid #CCC;
+  }
+  form#payment-form h3.legend {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    margin: 0 0 2em;
+  }
   form#payment-form .control-group {
     margin-bottom: 1.2em;
   }
@@ -718,11 +728,12 @@ form#payment-form {}
     line-height: 1.25;
   }
   form#payment-form .general-conditions-wrapper {
+    font-family: 'Droid', sans-serif;
     height: 13em;
     overflow-y: scroll;
     margin: 2em 0 0;
     padding: 1em 2em;
-    border: 1px solid #BBB;
+    border: 1px solid #DDD;
   }
     form#payment-form .general-conditions-wrapper p {
       font-size: 12px;
