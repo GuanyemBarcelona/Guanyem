@@ -669,19 +669,29 @@ form#payment-form {}
     form#payment-form label.inline input[type="radio"], form#payment-form label.inline input[type="checkbox"] {
       margin-top: 0;
     }
+  form#payment-form select.inline {
+    width: auto;
+  }
   form#payment-form input[type="text"] {
     width: 100%;
   }
   form#payment-form .general-conditions-wrapper {
-    width: 70%;
     height: 13em;
     overflow-y: scroll;
+    margin: 2em 0 0;
     padding: 1em 2em;
-    background: #efefef;
-    text-transform: uppercase;
+    border: 1px solid #BBB;
   }
     form#payment-form .general-conditions-wrapper p {
       font-size: 12px;
+    }
+    form#payment-form .general-conditions-wrapper h3 {
+      font-family: 'Droid', sans-serif;
+    }
+    form#payment-form .general-conditions-wrapper h4 {
+      font-family: 'Droid', sans-serif;
+      font-size: 12px;
+      font-style: normal;
     }
 
 /***  FOOTER ****/
