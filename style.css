@@ -661,17 +661,21 @@ form {}
 }
 /* payment form */
 form#payment-form {}
+  form#payment-form label.inline {
+    display: inline;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+    form#payment-form label.inline input[type="radio"], form#payment-form label.inline input[type="checkbox"] {
+      margin-top: 0;
+    }
   form#payment-form input[type="text"] {
     width: 100%;
-  }
-  form#payment-form label.checkbox {
-    margin-left: 180px;
   }
   form#payment-form .general-conditions-wrapper {
     width: 70%;
     height: 13em;
     overflow-y: scroll;
-    margin-left: 180px;
     padding: 1em 2em;
     background: #efefef;
     text-transform: uppercase;
