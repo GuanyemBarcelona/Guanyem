@@ -661,6 +661,9 @@ form {}
 }
 /* payment form */
 form#payment-form {}
+  form#payment-form .control-group {
+    margin-bottom: 1.5em;
+  }
   form#payment-form label.inline {
     display: inline;
     vertical-align: middle;
@@ -674,6 +677,10 @@ form#payment-form {}
   }
   form#payment-form input[type="text"] {
     width: 100%;
+  }
+  form#payment-form .help-block {
+    font-size: 12px;
+    line-height: 1.25;
   }
   form#payment-form .general-conditions-wrapper {
     height: 13em;
