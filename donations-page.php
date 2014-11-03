@@ -16,7 +16,6 @@ Template Name: Donations Page
                 <nav class="submenu">
                   <a href="/colabora-periodica" class="small-button smallred">Donació periòdica</a>
                   <a href="/colabora-puntual" class="small-button smallred">Donació puntual</a>
-                  <a href="/colabora-domiciliacio" class="small-button smallred">Domiciliació bancària</a>
                 </nav>
 
                 <?php the_content(); ?>
