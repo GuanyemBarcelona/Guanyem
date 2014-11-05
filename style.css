@@ -709,6 +709,12 @@ form#payment-form {}
   form#payment-form .control-group {
     margin-bottom: 1.2em;
   }
+  form#payment-form label {}
+    form#payment-form label .required-field {
+      font-family: sans-serif;
+      font-size: 16px;
+      color: #d42b16;
+    }
   form#payment-form label.inline {
     display: inline;
     vertical-align: middle;
