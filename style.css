@@ -654,6 +654,24 @@ body.search-results .sharing-buttons {
     color: #716b6a;
 }
 
+/* Comptes Tables */
+table.comptes-table {}
+  table.comptes-table th {
+    padding: 2px 10px;
+  }
+  table.comptes-table th.num {
+    width: 9%;
+  }
+  table.comptes-table td.num {
+    text-align: right;
+  }
+  table.comptes-table tfoot {
+    font-weight: bold;
+  }
+    table.comptes-table tfoot td {
+      background: #FFF;
+    }
+
 /*** FORMS ***/
 form {
   font-family: 'Raleway', sans-serif;
