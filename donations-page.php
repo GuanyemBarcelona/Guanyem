@@ -14,8 +14,8 @@ Template Name: Donations Page
                 <h1 class="entry-title"><?php the_title(); ?></h1>
 
                 <nav class="submenu">
-                  <a href="/colabora-periodica" class="small-button smallred">Donació periòdica</a>
-                  <a href="/colabora-puntual" class="small-button smallred">Donació puntual</a>
+                  <a href="/colabora-periodica" class="small-button smallred"><?php _e("Regular Donation", "guanyem"); ?></a>
+                  <a href="/colabora-puntual" class="small-button smallred"><?php _e("Timely Donation", "guanyem"); ?></a>
                 </nav>
 
                 <?php the_content(); ?>
