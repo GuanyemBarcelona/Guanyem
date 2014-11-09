@@ -2,6 +2,12 @@
 /*
 Template Name: Donations Page
 */
+
+$is_thankyou_page = (icl_object_id(get_the_ID(), 'page') == 2207);
+// sharing
+$donations_post_id = icl_object_id(2077, 'page');
+$donations_url = get_permalink($donations_post_id);
+$twitter_text = urlencode(__("I have already supported financially @guanyem #THIS-IS-OUR-CAUSE-HASHTAG", "guanyem"));
 ?>
 <?php do_action( '__before_main_wrapper' ); ##hook of the header with get_header ?>
 <div id="main-wrapper" class="<?php echo tc__f( 'tc_main_wrapper_classes' , 'container' ) ?>">
@@ -13,12 +19,28 @@ Template Name: Donations Page
 
                 <h1 class="entry-title"><?php the_title(); ?></h1>
 
+                <?php if (!$is_thankyou_page){ ?>
                 <nav class="submenu">
                   <a href="/colabora-periodica" class="small-button smallred"><?php _e("Regular Donation", "guanyem"); ?></a>
                   <a href="/colabora-puntual" class="small-button smallred"><?php _e("Timely Donation", "guanyem"); ?></a>
                 </nav>
+                <?php } ?>
 
                 <?php the_content(); ?>
+
+                <?php if ($is_thankyou_page){ ?>
+                <div class="sharing-buttons">
+                  <h2><?php _e('Share', 'guanyem'); ?></h2>
+                  <ul>
+                    <li>
+                      <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $donations_url; ?>" data-action="share-facebook"><i class="fa fa-facebook-square"></i><span>facebook</span></a>
+                    </li>
+                    <li>
+                      <a href="http://twitter.com/home?status=<?php echo $twitter_text; ?>" data-action="share-twitter"><i class="fa fa-twitter-square"></i><span>twitter</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <?php } ?>
 
             </div><!--.article-container -->
 
