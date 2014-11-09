@@ -15,7 +15,7 @@ $twitter_text = urlencode(__("I have already supported financially @guanyem #THI
     <div class="container" role="main">
         <div class="<?php echo tc__f( 'tc_column_content_wrapper_classes' , 'row column-content-wrapper' ) ?>">
                 
-            <div id="content" class="<?php echo tc__f( '__screen_layout' , tc__f ( '__ID' ) , 'class' ) ?> span9 article-container press-list-container">
+            <div id="content" class="<?php echo tc__f( '__screen_layout' , tc__f ( '__ID' ) , 'class' ) ?> span9 article-container donations-page-container">
 
                 <h1 class="entry-title"><?php the_title(); ?></h1>
 
