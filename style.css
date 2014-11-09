@@ -595,6 +595,10 @@ body.home .video-zone {}
 body.search-results .sharing-buttons {
   display: none;
 }
+.donations-page-container .sharing-buttons {
+  position: static;
+  margin: 20px 0;
+}
   .sharing-buttons h2 {
     margin: 0;
     padding: .5em 0 0;
@@ -603,11 +607,18 @@ body.search-results .sharing-buttons {
     line-height: 1.6;
     font-weight: normal;
   }
+  .donations-page-container .sharing-buttons h2 {
+    padding: .8em 0 0;
+    font-size: 18px;
+  }
   .sharing-buttons ul {
     float: left;
     margin: 0;
     padding: 0;
     overflow: hidden;
+  }
+  .donations-page-container .sharing-buttons ul {
+    
   }
     .sharing-buttons li {
       float: left;
@@ -619,6 +630,9 @@ body.search-results .sharing-buttons {
         color: #BBB;
         font-size: 22px;
         text-decoration: none;
+      }
+      .donations-page-container .sharing-buttons li a {
+        font-size: 40px;
       }
       .sharing-buttons li a:hover {
         color: #888;
