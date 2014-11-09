@@ -30,7 +30,7 @@ $twitter_text = urlencode(__("I have already supported financially @guanyem #THI
 
                 <?php if ($is_thankyou_page){ ?>
                 <div class="sharing-buttons">
-                  <h2><?php _e('Share', 'guanyem'); ?></h2>
+                  <h2><?php _e('Please, help us sharing this so that we can reach as much people as possible! :)', 'guanyem'); ?></h2>
                   <ul>
                     <li>
                       <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $donations_url; ?>" data-action="share-facebook"><i class="fa fa-facebook-square"></i><span>facebook</span></a>
