@@ -744,8 +744,12 @@ form#payment-form {}
   form#payment-form select.inline {
     width: auto;
   }
-  form#payment-form input[type="text"] {
+  form#payment-form input[type="text"], form#payment-form input[type="password"] {
     width: 100%;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
   form#payment-form .help-block {
     font-size: 12px;
