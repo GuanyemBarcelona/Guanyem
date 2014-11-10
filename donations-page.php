@@ -3,9 +3,9 @@
 Template Name: Donations Page
 */
 
-$is_thankyou_page = (icl_object_id(get_the_ID(), 'page') == 2207);
+$is_thankyou_page = (icl_object_id(get_the_ID(), 'page') == 3182); // 2207 in DEV
 // sharing
-$donations_post_id = icl_object_id(2077, 'page');
+$donations_post_id = icl_object_id(3184, 'page'); // 2077 in DEV
 $donations_url = get_permalink($donations_post_id);
 $twitter_text = urlencode(__("I have already supported financially @guanyem #THIS-IS-OUR-CAUSE-HASHTAG", "guanyem"));
 ?>
