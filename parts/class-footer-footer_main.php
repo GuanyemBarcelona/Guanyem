@@ -115,11 +115,11 @@ class TC_footer_main {
 	* @since Customizr 3.0.6
 	*/
   function tc_colophon_left_block() {
-  	$license_uri = 'http://creativecommons.org/licenses/by-sa/3.0/deed.es_ES';
+  	$license_uri = 'https://creativecommons.org/licenses/by-sa/3.0/deed.es_ES';
   	?>
   	<div class="span8 credits">
   		<p>
-  			<a rel="license" href="<?php echo $license_uri; ?>" class="cc-logo"><img alt="Licencia de Creative Commons" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png"></a>
+  			<a rel="license" href="<?php echo $license_uri; ?>" class="cc-logo"><img alt="Licencia de Creative Commons" src="//i.creativecommons.org/l/by-sa/3.0/88x31.png"></a>
         <?php _e("This work is licensed under a", "guanyem"); ?> <a rel="license" href="<?php echo $license_uri; ?>"><?php _e("Creative Commons Attribution-ShareAlike 3.0 Unported License", "guanyem"); ?></a>.
   			 - <?php icl_link_to_element(382); ?>
   		</p>
