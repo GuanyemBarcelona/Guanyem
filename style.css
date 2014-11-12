@@ -668,23 +668,38 @@ body.search-results .sharing-buttons {
     color: #716b6a;
 }
 
-/* Comptes Tables */
-table.comptes-table {}
-  table.comptes-table th {
-    padding: 2px 10px;
+/* Account Tables */
+.table-accounts {
+  overflow: hidden;
+  margin: 0 0 1em;
+}
+  .table-accounts h2 {
+    font-size: 20px;
   }
-  table.comptes-table th.num {
-    width: 9%;
+  .table-accounts .image {
+    float: left;
+    width: 34%;
+    margin-right: 1%;
   }
-  table.comptes-table td.num {
-    text-align: right;
+  .table-accounts table {
+    float: right;
+    width: 65%;
   }
-  table.comptes-table tfoot {
-    font-weight: bold;
-  }
-    table.comptes-table tfoot td {
-      background: #FFF;
+    .table-accounts table th {
+      padding: 2px 10px;
     }
+    .table-accounts table th.num {
+      width: 16%;
+    }
+    .table-accounts table td.num {
+      text-align: right;
+    }
+    .table-accounts table tfoot {
+      font-weight: bold;
+    }
+      .table-accounts table tfoot td {
+        background: #FFF;
+      }
 
 /*** FORMS ***/
 form {
