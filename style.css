@@ -668,6 +668,13 @@ body.search-results .sharing-buttons {
     color: #716b6a;
 }
 
+/**********************
+* Tables
+***********************/
+td {
+  padding: 6px 10px;
+}
+
 /* Account Tables */
 .table-accounts {
   overflow: hidden;
@@ -678,12 +685,12 @@ body.search-results .sharing-buttons {
   }
   .table-accounts .image {
     float: left;
-    width: 34%;
+    width: 30%;
     margin-right: 1%;
   }
   .table-accounts table {
     float: right;
-    width: 65%;
+    width: 69%;
   }
     .table-accounts table th {
       padding: 2px 10px;
