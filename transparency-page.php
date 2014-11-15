@@ -17,7 +17,7 @@ $twitter_text = urlencode(__("I have already supported financially @guanyem", "g
     <div class="container" role="main">
         <div class="<?php echo tc__f( 'tc_column_content_wrapper_classes' , 'row column-content-wrapper' ) ?>">
                 
-            <div id="content" class="<?php echo tc__f( '__screen_layout' , tc__f ( '__ID' ) , 'class' ) ?> span9 article-container donations-page-container">
+            <div id="content" class="<?php echo tc__f( '__screen_layout' , tc__f ( '__ID' ) , 'class' ) ?> article-container donations-page-container">
 
                 <nav class="submenu">
                   <?php wp_nav_menu(array('menu' => $submenu_ids[ICL_LANGUAGE_CODE])); ?>
@@ -43,11 +43,11 @@ $twitter_text = urlencode(__("I have already supported financially @guanyem", "g
 
             </div><!--.article-container -->
 
-            <div class="span3 right tc-sidebar">
+            <?php /*<div class="span3 right tc-sidebar">
               <div id="right" role="complementary">
                 
               </div>
-            </div>
+            </div>*/ ?>
 
         </div><!--.row -->
     </div><!-- .container role: main -->
