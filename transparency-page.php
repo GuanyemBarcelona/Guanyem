@@ -2,6 +2,9 @@
 /*
 Template Name: Transparency Page
 */
+// submenu
+$submenu_ids = array('ca' => 1109, 'es' => 1110);
+
 // thank you page
 $is_thankyou_page = (icl_object_id(get_the_ID(), 'page') == 3182); // 2207 in DEV
 $donations_post_id = icl_object_id(3184, 'page'); // 2077 in DEV
@@ -17,7 +20,7 @@ $twitter_text = urlencode(__("I have already supported financially @guanyem", "g
             <div id="content" class="<?php echo tc__f( '__screen_layout' , tc__f ( '__ID' ) , 'class' ) ?> span9 article-container donations-page-container">
 
                 <nav class="submenu">
-                  <?php wp_nav_menu(array('menu' => 1109)); ?>
+                  <?php wp_nav_menu(array('menu' => $submenu_ids[ICL_LANGUAGE_CODE])); ?>
                 </nav>
 
                 <h1 class="entry-title"><?php the_title(); ?></h1>
