@@ -334,6 +334,65 @@ li {
 }
 /* ------- */
 
+/* Sub menus */
+.submenu {
+  font-family: "Raleway", sans-serif;
+  position: relative;
+  margin: 0 0 2em;
+}
+  .submenu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    padding-bottom: 20px;
+  }
+    .submenu li {
+      float: left;
+      padding-left: 10px;
+    }
+      .submenu li ul {
+        display: none;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        padding-bottom: 0;
+      }
+      .submenu li.current-menu-ancestor ul {
+        display: block;
+      }
+    .submenu li:before {
+      content: " | ";
+    }
+    .submenu li:first-child {
+      padding-left: 0;
+    }
+    .submenu li:first-child:before {
+      content: "";
+    }
+      .submenu ul.menu > li > a {
+        padding-left: 5px;
+        font-size: 16px;
+      }
+      .submenu ul.menu > li:first-child > a {
+        padding-left: 0;
+      }
+        .submenu ul.menu > li > ul > li > a {
+          padding-left: 5px;
+          font-size: 20px;
+        }
+        .submenu ul.menu > li > ul > li:first-child > a {
+          padding-left: 0;
+        }
+      .submenu ul.menu > li.current-menu-ancestor > a,
+      .submenu ul.menu > li.current-menu-ancestor > ul > li.current-menu-item > a {
+        color: black;
+        text-decoration: underline;
+      }
+
+/* ----- */
+
 /* Posts */
 h1.entry-title, h2.entry-title{
   font-family: 'Raleway', sans-serif;
