@@ -29,9 +29,11 @@ $is_press_home = ($post->post_parent == 0);
                     <?php// include 'inc/sharing.php'; ?>
 
                     <nav class="submenu">
-                      <a href="/sala-de-premsa" class="small-button smallred">Notes de premsa</a>
-                      <a href="/sala-de-premsa/portaveus" class="small-button smallred">Portaveus</a>
-                      <a href="/sala-de-premsa/recursos" class="small-button smallred">Recursos de premsa</a>
+                      <ul>
+                        <li><a href="/sala-de-premsa" class="small-button smallred">Notes de premsa</a></li>
+                        <li><a href="/sala-de-premsa/portaveus" class="small-button smallred">Portaveus</a></li>
+                        <li><a href="/sala-de-premsa/recursos" class="small-button smallred">Recursos de premsa</a></li>
+                      </ul>
                     </nav>
 
                     <?php do_action ('__before_loop');##hooks the header of the list of post : archive, search... ?>
