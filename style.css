@@ -683,12 +683,12 @@ td {
   .table-accounts h2 {
     font-size: 20px;
   }
-  .table-accounts .image {
+  .table-accounts.with-chart .image {
     float: left;
     width: 30%;
     margin-right: 1%;
   }
-  .table-accounts table {
+  .table-accounts.with-chart table {
     float: right;
     width: 69%;
   }
