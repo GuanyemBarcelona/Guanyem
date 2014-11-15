@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Donations Page
+Template Name: Transparency Page
 */
 // submenus
 $base_uri = '/';
