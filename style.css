@@ -163,7 +163,7 @@ li {
     font-size: 14px;
     padding: 36px 0 30px 0;
 }
-.navbar .nav > li > a:hover, .navbar .nav > li.current-menu-item > a, .navbar .nav > li.current-menu-ancestor > a{
+.navbar .nav > li > a:hover, .navbar .nav > li.current-menu-item > a, .navbar .nav > li.current-menu-ancestor > a, .navbar .nav > li.current-page-ancestor > a {
     color: #df6050;
 }
 .menu-menu-top-container, .menu-menu-top-castellano0-container {
