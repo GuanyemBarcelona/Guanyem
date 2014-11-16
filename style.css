@@ -871,14 +871,15 @@ form#payment-form {}
     border: 1px solid #DDD;
   }
     form#payment-form .general-conditions-wrapper p {
-      font-size: 12px;
+      font-size: 13px;
     }
     form#payment-form .general-conditions-wrapper h3 {
       font-family: 'Droid', sans-serif;
+      text-transform: uppercase;
     }
     form#payment-form .general-conditions-wrapper h4 {
       font-family: 'Droid', sans-serif;
-      font-size: 12px;
+      font-size: 13px;
       font-style: normal;
     }
 
