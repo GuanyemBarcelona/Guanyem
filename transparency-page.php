@@ -6,7 +6,8 @@ Template Name: Transparency Page
 $submenu_ids = array('ca' => 1109, 'es' => 1110);
 
 // thank you page
-$is_thankyou_page = (icl_object_id(get_the_ID(), 'page') == 3182); // 2207 in DEV
+$current_id = icl_object_id(get_the_ID(), 'page', FALSE, 'ca');
+$is_thankyou_page = ($current_id == 3182); // 2207 in DEV
 $donations_post_id = icl_object_id(3184, 'page'); // 2077 in DEV
 $donations_url = get_permalink($donations_post_id);
 $twitter_text = urlencode(__("I have already supported financially @guanyem", "guanyem") . " #THIS-IS-OUR-CAUSE-HASHTAG");
@@ -29,7 +30,6 @@ $twitter_text = urlencode(__("I have already supported financially @guanyem", "g
 
                 <?php if ($is_thankyou_page){ ?>
                 <div class="sharing-buttons">
-                  <h2><?php _e('Please, help us sharing this so that we can reach as much people as possible! :)', 'guanyem'); ?></h2>
                   <ul>
                     <li>
                       <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $donations_url; ?>" data-action="share-facebook"><i class="fa fa-facebook-square"></i><span>facebook</span></a>

@@ -658,7 +658,7 @@ body.search-results .sharing-buttons {
 }
 .donations-page-container .sharing-buttons {
   position: static;
-  margin: 20px 0;
+  margin: 20px 0 20px 35%;
 }
   .sharing-buttons h2 {
     margin: 0;
