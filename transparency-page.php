@@ -10,7 +10,7 @@ $current_id = icl_object_id(get_the_ID(), 'page', FALSE, 'ca');
 $is_thankyou_page = ($current_id == 3182); // 2207 in DEV
 $donations_post_id = icl_object_id(3184, 'page'); // 2077 in DEV
 $donations_url = get_permalink($donations_post_id);
-$twitter_text = urlencode(__("I have already supported financially @guanyem", "guanyem") . " #THIS-IS-OUR-CAUSE-HASHTAG");
+$twitter_text = urlencode(__("I have already supported financially @guanyem", "guanyem") . " #GuanyemLaTransparència https://guanyembarcelona.cat/transparencia/colabora/");
 ?>
 <?php do_action( '__before_main_wrapper' ); ##hook of the header with get_header ?>
 <div id="main-wrapper" class="<?php echo tc__f( 'tc_main_wrapper_classes' , 'container' ) ?>">
