@@ -371,6 +371,9 @@ li {
     .submenu li:first-child:before {
       content: "";
     }
+      .submenu li a:hover {
+        text-decoration: none;
+      }
       .submenu ul.menu > li > a {
         padding-left: 5px;
         font-size: 16px;
@@ -388,7 +391,6 @@ li {
       .submenu ul.menu > li.current-menu-ancestor > a,
       .submenu ul.menu > li.current-menu-ancestor > ul > li.current-menu-item > a {
         color: black;
-        text-decoration: underline;
       }
 
 /* ----- */
