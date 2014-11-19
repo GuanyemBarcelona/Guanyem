@@ -431,6 +431,11 @@ article.type-press .tc-content {
 .entry-content a.link,.entry-content a.hover{
   color:#d42b15;
 }
+.entry-content p.legal {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.4;
+}
 
 /*** HOME ***/
 body.home #content > article {
