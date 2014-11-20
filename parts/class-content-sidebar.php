@@ -78,10 +78,10 @@ class TC_sidebar {
       $banner_collaborate_pageid = icl_object_id(2077, 'page', false);  // in PRO // 2077; // in DEV
       $banner_collaborate_url = get_permalink($banner_collaborate_pageid);
 
-      // banner teaming
-      $banner_teaming_id = 2367; // in PRO // 2026; // in DEV
-      if (ICL_LANGUAGE_CODE == 'es') $banner_teaming_id = 2369; // in PRO // 2025; // in DEV
-      $banner_teaming_img = wp_get_attachment_image($banner_teaming_id, 'full');
+      // banner donation
+      $banner_donation_id = 3792; // in PRO // ?; // in DEV
+      if (ICL_LANGUAGE_CODE == 'es') $banner_donation_id = 3794; // in PRO // ?; // in DEV
+      $banner_donation_img = wp_get_attachment_image($banner_donation_id, 'full');
 
       // banner whatsapp + telegram
       $banner_whatsapp_id = 1587; // in PRO // 980; // in DEV
@@ -98,8 +98,8 @@ class TC_sidebar {
               <a href="<?php print $banner_collaborate_url; ?>"><?php print $banner_collaborate_img; ?></a>
             </div>
 
-            <div class="banner banner-teaming">
-              <a href="https://www.teaming.net/guanyembarcelona" rel="external"><?php print $banner_teaming_img; ?></a>
+            <div class="banner banner-donation">
+              <a href="https://guanyembarcelona.cat/transparencia/colabora/"><?php print $banner_donation_img; ?></a>
             </div>
 
             <div class="banner banner-whatsapp">
