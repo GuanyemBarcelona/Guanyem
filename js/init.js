@@ -14,7 +14,11 @@ var config = {
 
 (function($){
   $(window).ready(function(){
-    config.LANGUAGE = $('html').attr('lang');
+    var lang = $('html').attr('lang');
+    if (typeof lang !== typeof undefined && lang !== false) {
+      config.LANGUAGE = lang;
+      if (config.LANGUAGE == 'es-ES') config.LANGUAGE = 'es';
+    }
 
     // For all links, if rel external open link in new tab
     $('body').on('click', 'a[rel="external"]', function(ev){
