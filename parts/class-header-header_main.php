@@ -238,25 +238,38 @@ class TC_header_main {
 
       	<div class="<?php echo apply_filters( 'tc_navbar_wrapper_class', 'navbar-wrapper clearfix span9' ) ?>">
 
-      		<div class="navbar notresp row-fluid pull-left">
-      			<div class="navbar-inner" role="navigation">
-      				<div class="row-fluid">
-            			<?php 
-            				do_action( '__navbar' ); //hook of social, tagline, menu, ordered by priorities 10, 20, 30 
-            			?>
-            		</div><!-- .row-fluid -->
-            	</div><!-- /.navbar-inner -->
-            </div><!-- /.navbar notresp -->
+    		  <div class="navbar notresp row-fluid pull-left">
+    			  <div class="navbar-inner" role="navigation">
+    				  <div class="row-fluid">
+          			<?php 
+          				do_action( '__navbar' ); //hook of social, tagline, menu, ordered by priorities 10, 20, 30 
+          			?>
+          		</div><!-- .row-fluid -->
+          	</div><!-- /.navbar-inner -->
+          </div><!-- /.navbar notresp -->
 
-            <div class="navbar resp">
+          <div class="navbar resp">
             	<div class="navbar-inner" role="navigation">
             		<?php 
             			do_action( '__navbar' , 'resp' ); //hook of social, menu, ordered by priorities 10, 20
             		?>
+                <?php 
+                $main_menu_id = 1;
+                if (ICL_LANGUAGE_CODE=='es') $main_menu_id = 25;
+                wp_nav_menu(array('menu' => $main_menu_id));
+                ?>
             	</div><!-- /.navbar-inner -->
       		</div><!-- /.navbar resp -->
 
     	</div><!-- /.navbar-wrapper -->
+
+      <nav id="main-menu">
+      <?php 
+      $main_menu_id = 1;
+      if (ICL_LANGUAGE_CODE=='es') $main_menu_id = 25;
+      wp_nav_menu(array('menu' => $main_menu_id));
+      ?>
+      </nav>
 
         <?php
         do_action( '__after_navbar' );
