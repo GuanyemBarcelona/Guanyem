@@ -41,6 +41,7 @@ function g_scripts() {
   wp_enqueue_style('guanyem_plugins_css', get_stylesheet_directory_uri() . '/plugins.css', array(), '1.0.0', 'all');
   wp_enqueue_script('guanyem_plugins', get_stylesheet_directory_uri() . '/js/plugins.js', array(), '1.0.1', true);
   wp_enqueue_script('guanyem_init', get_stylesheet_directory_uri() . '/js/init.js', array(), '1.0.3', true);
+  wp_enqueue_script('guanyem_init', get_stylesheet_directory_uri() . '/js/translateCrowdfunding.js', array(), '1.0.0', true);
 }
 add_action( 'wp_enqueue_scripts', 'g_scripts');
 

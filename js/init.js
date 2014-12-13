@@ -31,6 +31,9 @@ var config = {
 
     // Signatures countdown
     //prepareSignatures();
+
+    // Translate crowdfunding
+    translateCrowdfunding();
     
   }); // window ready
 
