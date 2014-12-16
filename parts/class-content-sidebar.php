@@ -82,11 +82,15 @@ class TC_sidebar {
       $banner_donation_id = 3792; // in PRO // ?; // in DEV
       if (ICL_LANGUAGE_CODE == 'es') $banner_donation_id = 3794; // in PRO // ?; // in DEV
       $banner_donation_img = wp_get_attachment_image($banner_donation_id, 'full');
+      $banner_donation_pageid = icl_object_id(3184, 'page', false);  // in PRO
+      $banner_donation_url = get_permalink($banner_donation_pageid);
 
-      // banner whatsapp + telegram
-      $banner_whatsapp_id = 1587; // in PRO // 980; // in DEV
-      if (ICL_LANGUAGE_CODE == 'es') $banner_whatsapp_id = 1588; // in PRO // 982; // in DEV
-      $banner_whatsapp_img = wp_get_attachment_image($banner_whatsapp_id, 'full');
+      // banner newsletter
+      $banner_newsletter_id = 4245; // in PRO 
+      if (ICL_LANGUAGE_CODE == 'es') $banner_newsletter_id = 4246; // in PRO
+      $banner_newsletter_img = wp_get_attachment_image($banner_newsletter_id, 'full');
+      $banner_newsletter_pageid = icl_object_id(126, 'page', false);  // in PRO
+      $banner_newsletter_url = get_permalink($banner_newsletter_pageid);
 
       ob_start();
       ?>
@@ -99,11 +103,11 @@ class TC_sidebar {
             </div>
 
             <div class="banner banner-donation">
-              <a href="https://guanyembarcelona.cat/transparencia/colabora/"><?php print $banner_donation_img; ?></a>
+              <a href="<?php print $banner_donation_url; ?>"><?php print $banner_donation_img; ?></a>
             </div>
 
-            <div class="banner banner-whatsapp">
-              <?php print $banner_whatsapp_img; ?>
+            <div class="banner banner-newsletter">
+              <a href="<?php print $banner_newsletter_url; ?>"><?php print $banner_newsletter_img; ?></a>
             </div>
             <?php } ?>
 
