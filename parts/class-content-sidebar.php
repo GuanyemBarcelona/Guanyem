@@ -92,6 +92,11 @@ class TC_sidebar {
       $banner_newsletter_pageid = icl_object_id(126, 'page', false);  // in PRO
       $banner_newsletter_url = get_permalink($banner_newsletter_pageid);
 
+      // banner whatsapp + telegram
+      $banner_whatsapp_id = 4382; // in PRO
+      if (ICL_LANGUAGE_CODE == 'es') $banner_whatsapp_id = 4383; // in PRO
+      $banner_whatsapp_img = wp_get_attachment_image($banner_whatsapp_id, 'full');
+
       ob_start();
       ?>
        
@@ -108,6 +113,10 @@ class TC_sidebar {
 
             <div class="banner banner-newsletter">
               <a href="<?php print $banner_newsletter_url; ?>"><?php print $banner_newsletter_img; ?></a>
+            </div>
+
+            <div class="banner banner-whatsapp">
+              <?php print $banner_whatsapp_img; ?>
             </div>
             <?php } ?>
 
