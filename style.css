@@ -955,6 +955,12 @@ footer#footer .colophon .credits {
 }
   .tc-sidebar .banner {
     margin: 0 0 10px;
+    padding: 0 0 10px;
+    border-bottom: 3px solid #d42b15;
+  }
+  .tc-sidebar .banner-donation {
+    padding: 0;
+    border-bottom: none;
   }
 
 .textwidget ul{
