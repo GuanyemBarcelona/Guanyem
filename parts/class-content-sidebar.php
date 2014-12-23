@@ -96,10 +96,6 @@ class TC_sidebar {
       <div class="<?php echo $class  ?>">
          <div id="<?php echo $position ?>" class="widget-area" role="complementary">
             <?php if (is_front_page()) { ?>
-            <div class="banner banner-collaborate">
-              <a href="<?php print $banner_collaborate_url; ?>"><?php print $banner_collaborate_img; ?></a>
-            </div>
-
             <div class="banner banner-donation">
               <a href="<?php print $banner_donation_url; ?>"><?php print $banner_donation_img; ?></a>
             </div>
