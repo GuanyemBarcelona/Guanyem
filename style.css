@@ -87,6 +87,9 @@ li {
 .menu a.current-menu-item {
   text-decoration: underline;
 }
+.tc-hover-menu-wrapper {
+  display: none;
+}
 #lang_sel_list {
     padding: 11px 0;
     float: left;
@@ -100,6 +103,7 @@ li {
     height: auto;
 }
 #lang_sel_list ul{
+    overflow: hidden;
     height: auto;
     top: 0;
     left: 0;
@@ -141,21 +145,25 @@ li {
 .navbar-wrapper .navbar h2{
     display:none;
 }
-#main-menu {
+.menu-menu-1-container, 
+.menu-menu-1-castellano-container {
   clear: both;
 }
-#main-menu ul {
+.menu-menu-1-container ul, 
+.menu-menu-1-castellano-container ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
     list-style: none;
 }
-#main-menu li{
+.menu-menu-1-container li, 
+.menu-menu-1-castellano-container li {
     float: left;
     padding: 0 2%;
     margin: 0;
 }
-#main-menu li > a {
+.menu-menu-1-container li > a, 
+.menu-menu-1-castellano-container li > a {
     display: block;
     font-family: 'Droid', sans-serif;
     font-weight: 400;
@@ -166,7 +174,10 @@ li {
     font-size: 14px;
     padding: 25px 0;
 }
-#main-menu li > a:hover, #main-menu li.current-menu-item > a, #main-menu li.current-menu-ancestor > a, #main-menu li.current-page-ancestor > a {
+.menu-menu-1-container li > a:hover, .menu-menu-1-castellano-container li > a:hover, 
+.menu-menu-1-container li.current-menu-item > a, .menu-menu-1-castellano-container li.current-menu-item > a, 
+.menu-menu-1-container li.current-menu-ancestor > a, .menu-menu-1-castellano-container li.current-menu-ancestor > a, 
+.menu-menu-1-container li.current-page-ancestor > a, .menu-menu-1-castellano-container li.current-page-ancestor > a {
     color: #df6050;
 }
 .menu-menu-top-container, .menu-menu-top-castellano0-container {
@@ -1035,18 +1046,35 @@ iframe#adhesions{
     }
 }
 @media (max-width: 979px){
+    .navbar-wrapper .navbar {
+      padding: 0 0 15px;
+    }
+
     .breadcrumbs{
         width: 90% !important;
         margin:0 5%;
         display:none;
     }
-    #main-menu{
-        width:100%;
-        padding:0;
+    .menu-menu-1-container, 
+    .menu-menu-1-castellano-container {
+      display: none;
     }
+    .navbar.resp .menu-menu-1-container.open, 
+    .navbar.resp .menu-menu-1-castellano-container.open {
+      display: block;
+    }
+      .menu-menu-1-container li, 
+      .menu-menu-1-castellano-container li {
+        float: none;
+      }
+        .menu-menu-1-container li > a, 
+        .menu-menu-1-castellano-container li > a {
+          padding: 5px 0;
+        }
     .tc-header .brand{
         width: 100%;
         display: block;
+        padding: 10px 0;
     }
     .tc-header .outside{
         display: none;
@@ -1166,8 +1194,10 @@ iframe#adhesions{
 @media (max-width: 500px) {
   #lang_sel_list,
   .menu-menu-top-container, .menu-menu-top-castellano0-container {
+    clear: both;
     float: none;
     width: auto;
+    height: auto;
   }
   #lang_sel_list {
     background: #494443;

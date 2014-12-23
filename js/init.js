@@ -33,7 +33,14 @@ var config = {
     //prepareSignatures();
 
     // Translate crowdfunding
-    translateCrowdfunding();
+    //translateCrowdfunding();
+
+    // RWD menu button re-done
+    $('.navbar .btn-navbar').click(function(e){
+      var $main_menu_rwd = $('.navbar.resp .menu-menu-1-container, .navbar.resp .menu-menu-1-castellano-container');
+      $main_menu_rwd.toggleClass('open');
+    });
+    
     
   }); // window ready
 
