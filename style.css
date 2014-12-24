@@ -136,6 +136,10 @@ li {
 }
 
 /* navbar */
+#main-menu {
+  float: left;
+  width: 90%;
+}
 .navbar{
     margin: 0;
 }
@@ -260,88 +264,77 @@ li {
 }
 
 /* Search form */
-/* The "Search for" text is needed for screen readers, but we move it off screen, so we won't see it */
 .search-form .screen-reader-text {
   position: absolute;
   left: -9999px;
   overflow: hidden;
 }
-.search-header {}
-  .search-header h1 {}
-    .search-header h1 span {
-      text-decoration: underline;
-    }
-  .search-header .search-form {
-    overflow: hidden;
-    padding: 14px 0 0;
-  }
-    .search-header .search-form > label {
-      float: left;
-      width: 73%;
-      margin-right: 2%;
-      padding: 0 2% 0 0;
-    }
-      .search-header .search-form > label input[type="search"] {
-        width: 95%;
-      }
-    .search-header .search-form > input[type="submit"] {
-      float: right;
-      width: 21%;
-      font-family: 'genericons';
-    }
-/* header Search */
-.my-nav-menu-search {
-  padding-left: 2%;
-}
-.my-nav-menu-search form {
+.tc-header .search-form {
   margin: 0;
-  padding: 0;
+  padding: 20px 0 0;
+  overflow: hidden;
+  float: left;
+  width: 10%;
 }
-/*Stop the display of the Search button*/
-.my-nav-menu-search .search-submit {
+.search-header .search-form {
   display: none;
 }
-/* Style the search input textbox */
-.my-nav-menu-search .search-field {
-  background: transparent;
-  border: none;
-  -webkit-box-shadow:    none;
-  -moz-box-shadow:       none;
-  box-shadow:            none;
-  cursor: pointer;
-  height: 26px;
-  margin: 2px 0 2px 0;
-  padding: 0 0 0 25px;
-  position: relative;
-  -webkit-transition: width 400ms ease;
-  -moz-transition:    width 400ms ease;
-  -o-transition:      width 400ms ease;
-  transition:         width 400ms ease;
-  width: 0px;
-}
-/* Expand the search box when you click it */
-.my-nav-menu-search .search-field:active,
-.my-nav-menu-search .search-field:focus {
-  color: #5a5a5a;
-  /* change the colour above if you are working with a dark navbar background */
-  border: 2px solid #c3c0ab;
-  cursor: text;
-  outline: 0;
-  width: 70px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow:    none;
-  box-shadow:         none;
-  margin: 0;
-}
-.my-nav-menu-search .search-form:before {
-  font-family: 'genericons';
-  content: '\f400';
-  position: absolute; /* this is the key to put it visually inside the search field */
-  font-size: 19px;
-  font-weight: normal;
-  padding-top: 0; /* tune this vertical alignment inside the search field, as needed */
-  padding-left: 5px; /* tune this horizontal alignment inside the search field, as needed */
-}
+  .tc-header .search-form > label {
+    float: left;
+    width: 73%;
+    margin-right: 2%;
+    padding: 0 2% 0 0;
+  }
+    .tc-header .search-form > label input[type="search"] {
+      width: 0;
+    }
+  .tc-header .search-form > input[type="submit"] {
+    float: right;
+    width: 21%;
+    font-family: 'genericons';
+  }
+  .tc-header .search-form .search-submit {
+    display: none;
+  }
+  .tc-header .search-form .search-field {
+    background: transparent;
+    border: none;
+    -webkit-box-shadow:    none;
+    -moz-box-shadow:       none;
+    box-shadow:            none;
+    cursor: pointer;
+    height: 26px;
+    margin: 2px 0 2px 0;
+    padding: 0 0 0 25px;
+    position: relative;
+    -webkit-transition: width 400ms ease;
+    -moz-transition:    width 400ms ease;
+    -o-transition:      width 400ms ease;
+    transition:         width 400ms ease;
+    width: 0px;
+  }
+  .tc-header .search-form .search-field:active,
+  .tc-header .search-form .search-field:focus {
+    color: #5a5a5a;
+    /* change the colour above if you are working with a dark navbar background */
+    border: 2px solid #c3c0ab;
+    cursor: text;
+    outline: 0;
+    width: 70px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow:    none;
+    box-shadow:         none;
+    margin: 0;
+  }
+  .tc-header .search-form:before {
+    font-family: 'genericons';
+    content: '\f400';
+    position: absolute; /* this is the key to put it visually inside the search field */
+    font-size: 19px;
+    font-weight: normal;
+    padding-top: 3px; /* tune this vertical alignment inside the search field, as needed */
+    padding-left: 5px; /* tune this horizontal alignment inside the search field, as needed */
+  }
 /* ------- */
 
 /* Sub menus */
@@ -1078,6 +1071,12 @@ iframe#adhesions{
     }
     .tc-header .outside{
         display: none;
+    }
+    .tc-header .search-form {
+      width: auto;
+      padding: 0;
+      clear: both;
+      float: none;
     }
     .tc-hover-menu.nav li {
         text-align: left;

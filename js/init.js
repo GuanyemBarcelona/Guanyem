@@ -10,6 +10,13 @@ var config = {
   HOST_URL: '' //'http://localhost/guanyem'
 };
 
+var locale = {
+  SEARCH: {
+    ca: "Cerca",
+    es: "Buscar"
+  }
+};
+
 (function($){
   $(window).ready(function(){
     var lang = $('html').attr('lang');
@@ -36,7 +43,9 @@ var config = {
       $main_menu_rwd.toggleClass('open');
     });
     
-    
+    // change search text
+    $('.tc-header .search-form > label input[type="search"]').attr('placeholder', locale.SEARCH[config.LANGUAGE] + '...');
+
   }); // window ready
 
   function prepareSharingButtons(){
