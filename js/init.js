@@ -7,9 +7,7 @@
 */
 var config = {
   LANGUAGE: 'ca',
-  HOST_URL: '', //'http://localhost/guanyem',
-  COUNTDOWN_URL: '/apoyos/countdown.php',
-  COUNTDOWN_MAX: 30000
+  HOST_URL: '' //'http://localhost/guanyem'
 };
 
 (function($){
@@ -28,9 +26,6 @@ var config = {
 
     // sharing buttons
     prepareSharingButtons();
-
-    // Signatures countdown
-    //prepareSignatures();
 
     // Translate crowdfunding
     //translateCrowdfunding();
@@ -63,37 +58,5 @@ var config = {
     if (window.focus) {
       newWindow.focus();
     }
-  }
-
-  function prepareSignatures(){
-    var $home_carousel = $('body.home .carousel');
-    if ($home_carousel.length){
-      var $first_slide = $home_carousel.find('> .carousel-inner > .item').eq(0);
-      var request_url = config.HOST_URL + config.COUNTDOWN_URL;
-      var request = $.get(request_url, function(data) {
-        var count = parseInt(data);
-        if (typeof count === 'number'){
-          var number_str = getNumberSeparatedByThousands(config.COUNTDOWN_MAX);
-          var $lead = $first_slide.find('.carousel-caption .lead');
-          var $btn = $first_slide.find('.carousel-caption .btn');
-          if (count > 0){
-            // find the number in the text and modify html and content: we couldn't put html in the slider's lead like <strong class="countdown">NUMBER</strong> which would be much appreciated :S
-            var index = $lead.text().indexOf(number_str);
-            var init_phrase = $lead.text().substring(0, index) + '<strong class="countdown">' + $lead.text().substring(index, index + number_str.length) + '</strong>' + $lead.text().substring(index + number_str.length);
-            $lead.html(init_phrase);
-            var $countdown = $lead.find('.countdown');
-            $countdown.text(getNumberSeparatedByThousands(count));
-          }
-        }
-      })
-      .fail(function() {
-        console.log('Ooops... We found an error loading ' + request_url);
-      });
-    }
-  }
-
-  function getNumberSeparatedByThousands(num, separator) {
-    var sep = (separator == null)? '.' : separator.toString();
-    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, sep);
   }
 })(jQuery);
