@@ -14,22 +14,28 @@
 */
 var textsCrowdfunding = [
     {
-        project: "prueba-completa",
+        project: "prova-completa",
         texts: [
+        {ca:"Prova Completa", es:"Prueba Completa"},
         {ca:"Descripció curta del projecte.", es:"Descripción corta del proyecto."},
         {ca:"Descripció ben llarga del projecte, amb molta més informació.", es:"Descripción bien larga del proyecto, con mucha más información."},
-        {ca:"Ajuda amb el que puguis a partir d'1€", es:"Ayuda con lo que puedas a partir de 1€"}]
+        {ca:"Ajuda amb el que puguis", es:"Ayuda con lo que puedas"},
+        {ca:"Ajuda amb el que puguis a partir d'1€", es:"Ayuda con lo que puedas a partir de 1€"},
+        {ca:"Ajuda amb el que puguis a partir d'un euro, un cop sel·leccionis la opció podràs augmentar la quantitat tant com vulguis.", es:"Ayuda con lo que puedas a partir de un euro, una vez selecciones la opción podrás aumentar la cantidad tanto como quieras."},
+        {ca:"Preguntes més freqüents.", es:"Preguntas más frecuentes."}]
     }
 ];
 function translateCrowdfunding() {
 
     function translateElements(textsProject, elements) {
         var el = elements.length;
-        var tpl = textsProject.length;
+        var tpl = textsProject.texts.length;
         for(var i = 0; i < el; ++i) {
             for(var j = 0; j < tpl; ++j) {
-                if(elements[i].textContent === textsProject[j].ca) {
-                    elements[i].textContent = textsProject[j].es;
+                if(elements[i].textContent === textsProject.texts[j].ca) {
+                    elements[i].textContent = textsProject.texts[j].es;
+                } else if(elements[i].textContent === textsProject.texts[j].ca + ":") {
+                    elements[i].textContent = textsProject.texts[j].es + ":";
                 }
             }
         }
@@ -64,6 +70,8 @@ function translateCrowdfunding() {
                 elems = document.getElementsByTagName("a");
                 translateElements(textsProject, elems);
                 elems = document.getElementsByTagName("div");
+                translateElements(textsProject, elems);
+                elems = document.getElementsByTagName("span");
                 translateElements(textsProject, elems);
             }
         }

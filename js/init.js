@@ -35,7 +35,7 @@ var locale = {
     prepareSharingButtons();
 
     // Translate crowdfunding
-    //translateCrowdfunding();
+    translateCrowdfunding();
 
     // RWD menu button re-done
     $('.navbar .btn-navbar').click(function(e){
