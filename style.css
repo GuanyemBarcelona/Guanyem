@@ -13,7 +13,7 @@ Tags: barcelona, desenvolupament per associacions i non-profit
 
 *
 * Some changes and order by GWT inc. (Guanyem Web Team)
-* For external (downloaded) scripts, please put them inside plugins.js :)
+* For external (downloaded) styles, please put them inside plugins.css :)
 */
 
 @import url("../customizr/style.css");
@@ -648,6 +648,86 @@ body.home .video-zone {}
           line-height: 1.25;
           text-align: center;
         }
+
+/* Eixos icons list */
+.entry-content .guanyem-eixos-list {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+  .entry-content .guanyem-eixos-list > li {
+    float: left;
+    width: 213px;
+    height: 290px;
+    overflow: hidden;
+    margin: 0 4px 10px 0;
+    font-family: inherit;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1;
+    text-align: left;
+  }
+    .entry-content .guanyem-eixos-list > li h3 {
+      width: 213px;
+      height: 213px;
+      overflow: hidden;
+      margin: 0 0 10px;
+      font-size: 15px;
+      line-height: 1.1;
+      font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    }
+      .entry-content .guanyem-eixos-list > li h3 a {
+        display: block;
+        width: 193px;
+        height: 195px;
+        padding: 18px 10px 0;
+        color: white;
+        text-align: center;
+        background: #f6433f url("images/eixos_sprite.png") no-repeat 0 0;
+      }
+      .entry-content .guanyem-eixos-list > li[data-type="health"] h3 a {
+        background-position: 0 0;
+      }
+      .entry-content .guanyem-eixos-list > li[data-type="job"] h3 a {
+        background-position: -219px 0;
+      }
+      .entry-content .guanyem-eixos-list > li[data-type="town-planning"] h3 a {
+        background-position: -439px 0;
+      }
+      .entry-content .guanyem-eixos-list > li[data-type="economy"] h3 a {
+        background-position: -656px 0;
+      }
+      .entry-content .guanyem-eixos-list > li[data-type="education"] h3 a {
+        background-position: 0 -220px;
+      }
+      .entry-content .guanyem-eixos-list > li[data-type="gender"] h3 a {
+        background-position: -219px -220px;
+      }
+      .entry-content .guanyem-eixos-list > li[data-type="local-government"] h3 a {
+        background-position: -439px -220px;
+      }
+      .entry-content .guanyem-eixos-list > li[data-type="migration"] h3 a {
+        background-position: -656px -220px;
+      }
+      .entry-content .guanyem-eixos-list > li[data-type="culture"] h3 a {
+        background-position: 0 -440px;
+      }
+      .entry-content .guanyem-eixos-list > li[data-type="information-society"] h3 a {
+        background-position: -219px -440px;
+      }
+      .entry-content .guanyem-eixos-list > li[data-type="tourism"] h3 a {
+        background-position: -439px -440px;
+      }
+      .entry-content .guanyem-eixos-list > li h3 a:hover {
+        text-decoration: none;
+      }
+    .entry-content .guanyem-eixos-list > li h4 {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.1;
+      font-style: normal;
+      font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    }  
 
 /* Signa */
 .signa p {
