@@ -684,7 +684,7 @@ body.home .video-zone {}
         padding: 18px 10px 0;
         color: white;
         text-align: center;
-        background: #f6433f url("images/eixos_sprite.png") no-repeat 0 0;
+        background: #f6433f url("images/eixos_sprite.png") no-repeat 213px 213px;
       }
       .entry-content .guanyem-eixos-list > li[data-type="health"] h3 a {
         background-position: 0 0;
