@@ -9,7 +9,7 @@ $is_press_home = ($post->post_parent == 0);
 <div id="main-wrapper" class="<?php echo tc__f( 'tc_main_wrapper_classes' , 'container' ) ?>">
 
     <?php do_action( '__before_main_container' ); ##hook of the featured page (priority 10) and breadcrumb (priority 20)...and whatever you need! ?>
-    
+
     <div class="container" role="main">
         <div class="<?php echo tc__f( 'tc_column_content_wrapper_classes' , 'row column-content-wrapper' ) ?>">
 
@@ -23,7 +23,7 @@ $is_press_home = ($post->post_parent == 0);
                 </div>
 
                 <?php do_action( '__before_article_container'); ##hook of left sidebar?>
-                
+
                 <div id="content" class="<?php echo tc__f( '__screen_layout' , tc__f ( '__ID' ) , 'class' ) ?> span6 article-container press-list-container">
 
                     <?php// include 'inc/sharing.php'; ?>
@@ -39,10 +39,17 @@ $is_press_home = ($post->post_parent == 0);
                     <?php do_action ('__before_loop');##hooks the header of the list of post : archive, search... ?>
 
                     <?php if ($is_press_home){ ?>
-                      <?php query_posts( 'post_type=press'); ?>
+                      <?php
+                        $args = array(
+                         'post_type' => 'press',
+                         'posts_per_page' => 10,
+                         'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1),
+                         );
+                        query_posts($args);
+                        ?>
                       <?php if ( have_posts() ) : ?>
                           <?php while ( have_posts() ) : ##all other cases for single and lists: post, custom post type, page, archives, search, 404 ?>
-                              
+
                               <?php the_post(); ?>
 
                               <?php do_action ('__before_article') ?>
