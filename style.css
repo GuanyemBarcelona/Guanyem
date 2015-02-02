@@ -722,6 +722,9 @@ body.home .video-zone {}
       .entry-content .guanyem-eixos-list > li[data-type="ecology"] h3 a {
         background-position: -656px -440px;
       }
+      .entry-content .guanyem-eixos-list > li[data-type="information-right"] h3 a {
+        background-position: 0 -660px;
+      }
       .entry-content .guanyem-eixos-list > li h3 a:hover {
         text-decoration: none;
       }
