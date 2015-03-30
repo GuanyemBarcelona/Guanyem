@@ -12,68 +12,17 @@
 /**
 * Translation for Crowdfunding texts
 */
-var textsCrowdfunding = [
-    {
-        project: "prova-completa",
-        texts: [
-        {ca:"Prova Completa", es:"Prueba Completa"},
-        {ca:"Descripció curta del projecte.", es:"Descripción corta del proyecto."},
-        {ca:"Descripció ben llarga del projecte, amb molta més informació.", es:"Descripción bien larga del proyecto, con mucha más información."},
-        {ca:"Ajuda amb el que puguis", es:"Ayuda con lo que puedas"},
-        {ca:"Ajuda amb el que puguis a partir d'1€", es:"Ayuda con lo que puedas a partir de 1€"},
-        {ca:"Ajuda amb el que puguis a partir d'un euro, un cop sel·leccionis la opció podràs augmentar la quantitat tant com vulguis.", es:"Ayuda con lo que puedas a partir de un euro, una vez selecciones la opción podrás aumentar la cantidad tanto como quieras."},
-        {ca:"Preguntes més freqüents.", es:"Preguntas más frecuentes."}]
-    }
-];
 function translateCrowdfunding() {
 
-    function translateElements(textsProject, elements) {
-        var el = elements.length;
-        var tpl = textsProject.texts.length;
-        for(var i = 0; i < el; ++i) {
-            for(var j = 0; j < tpl; ++j) {
-                if(elements[i].textContent === textsProject.texts[j].ca) {
-                    elements[i].textContent = textsProject.texts[j].es;
-                } else if(elements[i].textContent === textsProject.texts[j].ca + ":") {
-                    elements[i].textContent = textsProject.texts[j].es + ":";
-                }
-            }
-        }
-    }
+    var langToSee = config.LANGUAGE.substr(0, 2);
 
-    if(config.LANGUAGE.substr(0, 2) === "es") {
-        //Translate only in Spanish.
-        var project = window.location.href;
-        var index = project.lastIndexOf("?");
-        if (index > 0) {
-            project = project.substring(0, index - 1);
-        }
-        index = project.lastIndexOf("/");
-        if (index === project.length - 1) {
-            project = project.substring(0, index);
-        }
-        index = project.lastIndexOf("/");
-        project = project.substring(index + 1);
-
-        var tcl = textsCrowdfunding.length;
-        for (var i = 0; i < tcl; ++i) {
-            var textsProject = textsCrowdfunding[i];
-            if (textsProject.project === project) {
-                //It's the project we need to translate, so go for it.
-                //Order: P, H1, OPTION, A, DIV
-                var elems = document.getElementsByTagName("p");
-                translateElements(textsProject, elems);
-                elems = document.getElementsByTagName("h1");
-                translateElements(textsProject, elems);
-                elems = document.getElementsByTagName("option");
-                translateElements(textsProject, elems);
-                elems = document.getElementsByTagName("a");
-                translateElements(textsProject, elems);
-                elems = document.getElementsByTagName("div");
-                translateElements(textsProject, elems);
-                elems = document.getElementsByTagName("span");
-                translateElements(textsProject, elems);
-            }
+    var langDivs = document.getElementsByClassName("language-text");
+    var l = langDivs.length;
+    for (var i = 0; i < l; ++i) {
+        var div = langDivs[i];
+        var lang = div.getAttribute("lang").toString();
+        if(lang !== langToSee) {
+            div.style.display = "none";
         }
     }
 }
